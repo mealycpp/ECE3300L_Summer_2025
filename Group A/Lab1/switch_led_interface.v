@@ -1,26 +1,10 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 06/15/2025 11:43:56 PM
-// Design Name: 
-// Module Name: switch_led_interface
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module switch_led_interface(
-
+    input wire [15:0] sw,  // declaration of 16 bit wide input named sw of data type wire
+    output wire [15:0] led // declaration of 16 bit wide output named led of data type wire
     );
+    
+    assign led = sw; 
+    
 endmodule
