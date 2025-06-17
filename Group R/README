@@ -1,11 +1,1 @@
-Team Members: Robert Lainez Torres & Dia Agrawal
-Assignment Overview
-ECE 3300 Lab 1 – Switch ↔ LED Interface
-– Build a Verilog module on the Digilent Nexys A7-100T that reads 16 switches and drives 16 LEDs.
-– Learn HDL I/O mapping, constraints files, synthesis, and FPGA programming
 
-CODE
-- xdc snippet and verilog code is attached in the folder named ECE3300L-Lab1-GroupR
-
-REPORT 
-- pdf report is attached containing screenshots and video link
