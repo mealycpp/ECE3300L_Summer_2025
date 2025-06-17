@@ -1,1 +1,11 @@
+# Lab 1 – Switch to LED Mapping
 
+## Overview
+
+This project demonstrates a basic Verilog module where physical switches on an FPGA board are mapped directly to their corresponding LEDs. When a switch is flipped, the LED right above it lights up. This simple exercise is designed to introduce hardware description using Verilog and familiarize students with Vivado and FPGA pin constraint management.
+
+## Group H
+
+- **Name:** Arvin Ghaloosian and Vittorio Huizar
+- **Class:** ECE 3301L
+- **Date:** June 17th 2025 
