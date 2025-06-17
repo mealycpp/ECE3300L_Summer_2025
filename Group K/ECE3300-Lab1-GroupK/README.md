@@ -1,4 +1,4 @@
-# ECE3300-Lab1-GroupN
+# ECE3300-Lab1-GroupK
 Lab 1 Switch &lt;-> LED Interface
 
 Members: Andy Siu & Dalton Hoang
