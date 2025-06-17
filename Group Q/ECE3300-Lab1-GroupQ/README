@@ -1,1 +1,7 @@
+ECE 3300 Lab 1 – Switch ↔ LED Interface
+
+Members: Jared Mocling and Kevin Tang
+
+Lab Objective: In this Lab we will build a Verilog module on the Digilent Nexys A7-100T that reads 16 switches and drives 16
+LEDs. This will then help us learn about HDL I/O mapping, constraints files, synthesis, and FPGA programming.
 
