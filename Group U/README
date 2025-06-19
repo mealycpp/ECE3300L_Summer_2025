@@ -1,1 +1,29 @@
+# ECE3300 Lab 1 - Pin Mapping with XDC
 
+## Overview
+This project demonstrates how to map switches to LEDs using an XDC constraints file on the Nexys A7100T ECE FPGA trainer board. The goal was to enable LED 0 with Switch 0, LED 1 with Switch 1, and so on.
+
+## Features
+- Mapped switches to corresponding LEDs via XDC constraints.
+- Used Vivado to set up the project, write the main file, and generate the bitstream.
+- Verified functionality and resource utilization using the Vivado tools.
+
+## Tools Used
+- Vivado Design Suite
+- Nexys A7100T FPGA Board
+
+## Group Members
+- **Justin Herrera** – Report writing, datasheet review, and switch-to-LED mapping (40%)
+- **Nathan Rahbar** – XDC file, main Verilog file, Vivado project setup (60%)
+
+## Floor Plan & Resource Usage
+The project includes an analysis of flip-flop and LUT count, and a floorplan to visualize resource usage.
+
+## Video Demonstration
+Watch our demo video: [YouTube Link](https://youtu.be/gXQPNfW-RQY?feature=shared)
+
+## Conclusion
+This lab served as an introduction to:
+- Creating and managing FPGA projects in Vivado
+- Writing and editing constraint and HDL files
+- Understanding FPGA resource utilization and basic digital system design
