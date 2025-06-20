@@ -1,4 +1,4 @@
-# ECE3300-Lab1-Groupy
+# ECE3300-Lab1-GroupY
 Lab 1 Switch &lt;-> LED Interface
 
 Members: Heba Hafez and Sean Wygant
