@@ -1,0 +1,29 @@
+# Ignore Vivado auto-generated project files
+*.log
+*.jou
+*.str
+
+*.cache/
+*.runs/
+*.hw/
+*.ip_user_files/
+*.sim/
+*.webtalk/
+
+# Project files that shouldn't be tracked
+*.xpr
+*.xpr.user
+*.wcfg
+*.xml
+*.backup.*
+*.dcp
+
+# Ignore Vivado project folders if placed inside lab folders
+vivado_proj/
+vivado_project/
+
+# Temporary or OS files
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
