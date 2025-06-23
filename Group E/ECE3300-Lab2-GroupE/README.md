@@ -1,4 +1,4 @@
-Lab 2 4x16 Decoder
+Lab 2: 4x16 Decoder
 
 Members: Paul Kim and Winson Zhu
 
