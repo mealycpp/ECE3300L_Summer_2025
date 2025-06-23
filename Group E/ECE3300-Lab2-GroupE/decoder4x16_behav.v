@@ -25,8 +25,8 @@ module decoder4x16_behav(
     );
   always @(*) begin
     
-    led = 16'b0; // reset all outputs to 0
-        if (e) begin // only decode when enabled
+    led = 16'b0; // ▶ reset all outputs to 0
+        if (e) begin // ▶ only decode when enabled
         case (sw)
         4'b0000:led=16'b0000_0000_0000_0001; // ▶ output 0
         4'b0001:led=16'b0000_0000_0000_0010; // ▶ output 1
