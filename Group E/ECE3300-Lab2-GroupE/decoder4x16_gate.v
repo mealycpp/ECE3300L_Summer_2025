@@ -15,7 +15,7 @@
 // 
 // Revision: 1.0
 // Revision 0.01 - File Created
-// Additional Comments: This has been designed by Student Daniel and Student Kobe
+// Additional Comments: 
 //////////////////////////////////////////////////////////////////////////////////
 
 
