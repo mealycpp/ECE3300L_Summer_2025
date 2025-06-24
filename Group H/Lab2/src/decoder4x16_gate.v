@@ -1,7 +1,7 @@
 module decoder4x16_gate(
-    input  [3:0] A,  // 4-bit input
+    input  [3:0] A,  // 4 bit input
     input        E,  // Enable
-    output [15:0] Y  // 16-bit one-hot output
+    output [15:0] Y  // 16 bit output
 );
 
 // Invert inputs
