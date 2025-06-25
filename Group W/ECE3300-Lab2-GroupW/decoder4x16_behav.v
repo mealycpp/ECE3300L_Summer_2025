@@ -28,9 +28,9 @@ module decoder4x16_behav(
     
     always @(*) 
         begin
-            Y = 16'b0;
+            Y = 16'b0; // reset all outputs to 0
             
-            if (E) 
+            if (E) // only decode when enabled
             begin
                 case (A)
                     4'b0000: Y = 16'b0000_0000_0000_0001; // output 0
