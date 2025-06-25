@@ -4,4 +4,5 @@ Members: Jetts Crittenden & Evan Tram
 
 Objective: Design, simulate, and implement a 4-to-16 decoder with an enable input. Practice gate-level (structural) coding,
            behavioral coding, writing a testbench, reading Vivado's resource utilization and timing reports.
+Video Demo: https://youtu.be/KDXrhcK-BLk?si=C7Dqzie8rYXwDHWG 
 
