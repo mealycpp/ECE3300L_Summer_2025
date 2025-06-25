@@ -5,23 +5,23 @@
 module decoder4x16_tb;
 
     //Inputs
-    reg [3:0] A;    
-    reg E;  
+    reg [3:0] A;    🟦
+    reg E;          🟦
     
     // Outputs  for gate module      
-    wire [15:0] Y_gate;
+    wire [15:0] Y_gate;    🟩
     
     // Outputs for Behavior Module
-    wire [15:0] Y_behav; 
+    wire [15:0] Y_behav;     🟩
     
     //expected output value for each container (16)
-    reg [15:0] expected_out;
+    reg [15:0] expected_out;    🟩
     
     // gate level  
-    decoder4x16_gate uut_gate (.A(A), .E(E), .Y(Y_gate));
+    decoder4x16_gate uut_gate (.A(A), .E(E), .Y(Y_gate)); 🟧
     
     // behavior
-    decoder4x16_behav uut_behav ( .A(A), .E(E), .Y(Y_behav));
+    decoder4x16_behav uut_behav ( .A(A), .E(E), .Y(Y_behav));   🟧 
     
     integer i;
     
