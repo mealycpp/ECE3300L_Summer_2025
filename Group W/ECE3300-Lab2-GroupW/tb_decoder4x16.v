@@ -167,8 +167,9 @@ module tb_decoder4x16(
 			
 			#10
 			
-			$finish;
-			$display;
+			$display("FAIL: A=%b E=%b Y=%b (expected %b)", A_tb, E_tb, Y_tb, 16'b1);
 			$fatal;
+			$finish;
+			
 		end
 endmodule
