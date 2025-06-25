@@ -21,14 +21,14 @@
 
 
 module decoder4x16_behav(
-    input [3:0] A,
-    input E, 
-    output reg [15:0] Y
+    input [3:0] A,         🟦
+    input E,               🟦      
+    output reg [15:0] Y    🟩
     );
     
-    always @(*) begin
-        if (E) begin 
-            case (A)
+    always @(*) begin       🟨
+        if (E) begin        🟨
+            case (A)        🟨
                 4'b0000: Y = 16'b0000000000000001;
                 4'b0001: Y = 16'b0000000000000010;
                 4'b0010: Y = 16'b0000000000000100;
@@ -45,7 +45,7 @@ module decoder4x16_behav(
                 4'b1101: Y = 16'b0010000000000000;
                 4'b1110: Y = 16'b0100000000000000;
                 4'b1111: Y = 16'b1000000000000000;
-            endcase
+            endcase 🟨
        // end else begin
          //   Y = 16'b0;   // resets all values back to zero, for safety 
         //end
