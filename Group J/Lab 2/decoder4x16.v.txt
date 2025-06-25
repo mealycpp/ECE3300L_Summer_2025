@@ -1,0 +1,44 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 06/20/2025 11:31:42 AM
+// Design Name: 
+// Module Name: decoder4x16
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+module decoder3x8(input wire E, input wire [2:0] sw, output wire [7:0] led);
+    assign led[0] = E & ~sw[2] & ~sw[1] & ~sw[0];
+    assign led[1] = E & ~sw[2] & ~sw[1] &  sw[0];
+    assign led[2] = E & ~sw[2] &  sw[1] & ~sw[0];
+    assign led[3] = E & ~sw[2] &  sw[1] &  sw[0];
+    assign led[4] = E &  sw[2] & ~sw[1] & ~sw[0];
+    assign led[5] = E &  sw[2] & ~sw[1] &  sw[0];
+    assign led[6] = E &  sw[2] &  sw[1] & ~sw[0];
+    assign led[7] = E &  sw[2] &  sw[1] &  sw[0];
+endmodule
+
+module decoder4x16(input wire E, input wire [3:0] sw, output wire [15:0] led);
+    wire [7:0] led_Low, led_High;
+    wire E_Low, E_High;
+    
+    assign E_Low = E & ~sw[3]; //Enable lower 3-8 decoder when X[3] = 0
+    assign E_High = E & sw[3]; //Enable higher 3-8 decoder when X[3] = 1
+    
+    decoder3x8 dec_low (.E(E_Low), .sw(sw[2:0]), .led(led_Low));
+    decoder3x8 dec_high (.E(E_High), .sw(sw[2:0]), .led(led_High));
+    
+    assign led = {led_High, led_Low};
+    
+endmodule
