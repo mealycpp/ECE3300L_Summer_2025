@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1750810631">
+  <File Type="PA-TCL" Name="decoder4x16_behav.tcl"/>
+  <File Type="REPORTS-TCL" Name="decoder4x16_behav_reports.tcl"/>
+  <File Type="INIT-TIMING" Name="decoder4x16_behav_timing_summary_init.rpt"/>
+  <File Type="OPT-DCP" Name="decoder4x16_behav_opt.dcp"/>
+  <File Type="OPT-DRC" Name="decoder4x16_behav_drc_opted.rpt"/>
+  <File Type="OPT-UTIL" Name="decoder4x16_behav_utilization_opted.rpt"/>
+  <File Type="OPT-UTIL-PB" Name="decoder4x16_behav_utilization_opted.pb"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="decoder4x16_behav_methodology_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="decoder4x16_behav.hwdef"/>
+  <File Type="OPT-TIMING" Name="decoder4x16_behav_timing_summary_opted.rpt"/>
+  <File Type="OPT-RQA-PB" Name="decoder4x16_behav_rqa_opted.pb"/>
+  <File Type="PWROPT-DCP" Name="decoder4x16_behav_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="decoder4x16_behav_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="decoder4x16_behav_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="decoder4x16_behav_placed.dcp"/>
+  <File Type="PLACE-IO" Name="decoder4x16_behav_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="decoder4x16_behav_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="decoder4x16_behav_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="decoder4x16_behav_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="decoder4x16_behav_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="decoder4x16_behav_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="decoder4x16_behav_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="decoder4x16_behav_timing_summary_placed.rpt"/>
+  <File Type="PLACE-RQA-PB" Name="decoder4x16_behav_rqa_placed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="decoder4x16_behav_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="decoder4x16_behav_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="decoder4x16_behav_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="decoder4x16_behav_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="decoder4x16_behav_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="decoder4x16_behav_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="decoder4x16_behav_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="decoder4x16_behav_routed_bb.dcp"/>
+  <File Type="ROUTE-UTIL" Name="decoder4x16_behav_utilization_routed.rpt"/>
+  <File Type="ROUTE-UTIL-PB" Name="decoder4x16_behav_utilization_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="decoder4x16_behav_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="decoder4x16_behav_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="decoder4x16_behav_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="decoder4x16_behav_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="decoder4x16_behav_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="decoder4x16_behav_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="decoder4x16_behav_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="decoder4x16_behav_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="decoder4x16_behav_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="decoder4x16_behav_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="decoder4x16_behav_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="decoder4x16_behav_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="decoder4x16_behav_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="decoder4x16_behav_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="decoder4x16_behav_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="decoder4x16_behav_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="decoder4x16_behav_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="decoder4x16_behav_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="decoder4x16_behav_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-RQS-PB" Name="decoder4x16_behav_rqs_routed.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="decoder4x16_behav_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="decoder4x16_behav_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="decoder4x16_behav_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="decoder4x16_behav_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="decoder4x16_behav_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="decoder4x16_behav_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="decoder4x16_behav_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="decoder4x16_behav_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="decoder4x16_behav.bit"/>
+  <File Type="BG-BIN" Name="decoder4x16_behav.bin"/>
+  <File Type="BITSTR-MSK" Name="decoder4x16_behav.msk"/>
+  <File Type="BITSTR-RBT" Name="decoder4x16_behav.rbt"/>
+  <File Type="BITSTR-NKY" Name="decoder4x16_behav.nky"/>
+  <File Type="BITSTR-BMM" Name="decoder4x16_behav_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="decoder4x16_behav.mmi"/>
+  <File Type="PDI-FILE" Name="decoder4x16_behav.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="decoder4x16_behav_boot.pdi"/>
+  <File Type="PL-PDI-FILE" Name="decoder4x16_behav_pld.pdi"/>
+  <File Type="RCFI_FILE" Name="decoder4x16_behav.rcfi"/>
+  <File Type="CFI_FILE" Name="decoder4x16_behav.cfi"/>
+  <File Type="RNPI_FILE" Name="decoder4x16_behav.rnpi"/>
+  <File Type="RCDO-FILE" Name="decoder4x16_behav.rcdo"/>
+  <File Type="MARKER-RNPI-FILE" Name="decoder4x16_behav_markers.rnpi"/>
+  <File Type="MARKER-RCDO-FILE" Name="decoder4x16_behav_markers.rcdo"/>
+  <File Type="BOOT_RNPI_FILE" Name="decoder4x16_behav_boot.rnpi"/>
+  <File Type="BOOT_MARKER_RNPI_FILE" Name="decoder4x16_behav_boot_markers.rnpi"/>
+  <File Type="PL_RNPI_FILE" Name="decoder4x16_behav_pld.rnpi"/>
+  <File Type="PL_MARKER_RNPI_FILE" Name="decoder4x16_behav_pld_markers.rnpi"/>
+  <File Type="PL_MASK_RNPI_FILE" Name="decoder4x16_behav_pld_mask.rnpi"/>
+  <File Type="PL_SHUTDOWN_RNPI_FILE" Name="decoder4x16_behav_pld_shutdown.rnpi"/>
+  <File Type="PL_UNMASK_RNPI_FILE" Name="decoder4x16_behav_pld_unmask.rnpi"/>
+  <File Type="PL-RCDO-FILE" Name="decoder4x16_behav_pld.rcdo"/>
+  <File Type="PL-CLEAR-RCDO-FILE" Name="decoder4x16_behav_pld_clear.rcdo"/>
+  <File Type="PL_MARKER_RCDO_FILE" Name="decoder4x16_behav_pld_markers.rcdo"/>
+  <File Type="PL_MASK_RCDO_FILE" Name="decoder4x16_behav_pld_mask.rcdo"/>
+  <File Type="PL_UNMASK_MARKER_RCDO_FILE" Name="decoder4x16_behav_pld_unmask_markers.rcdo"/>
+  <File Type="PL_UNMASK_RCDO_FILE" Name="decoder4x16_behav_pld_unmask.rcdo"/>
+  <File Type="NPI_FILE" Name="decoder4x16_behav.npi"/>
+  <File Type="RBD_FILE" Name="decoder4x16_behav.rbd"/>
+  <File Type="MMI-FILE" Name="decoder4x16_behav.mmi"/>
+  <File Type="BIF-FILE" Name="decoder4x16_behav.bif"/>
+  <File Type="BOOT-BIF-FILE" Name="decoder4x16_behav_boot.bif"/>
+  <File Type="PL-BIF-FILE" Name="decoder4x16_behav_pld.bif"/>
+  <File Type="LTX-FILE" Name="decoder4x16_behav.ltx"/>
+  <File Type="BOOT-LTX-FILE" Name="decoder4x16_behav_boot.ltx"/>
+  <File Type="PL-LTX-FILE" Name="decoder4x16_behav_pld.ltx"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="decoder4x16_behav.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="decoder4x16_behav.sysdef"/>
+  <File Type="BG-BGN" Name="decoder4x16_behav.bgn"/>
+  <File Type="BG-DRC" Name="decoder4x16_behav.drc"/>
+  <File Type="RDI-RDI" Name="decoder4x16_behav.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-RQS" Name="decoder4x16_behav_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="decoder4x16_behav_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../src/decoder4x16_behav.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../src/decoder4x16_gate.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="decoder4x16_behav"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../constraints/nexysA7.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/decoder4x16_behav.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

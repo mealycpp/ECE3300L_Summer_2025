@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/verilog/ece3300l/Group H/Lab2/src/decoder4x16_behav.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder4x16_behav
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/verilog/ece3300l/Group H/Lab2/tb/tb_decoder4x16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_decoder4x16
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/verilog/ece3300l/Group H/Lab2/vivado_proj/lab2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
