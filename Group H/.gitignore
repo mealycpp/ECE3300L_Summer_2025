@@ -1,34 +1,11 @@
-# Ignore Vivado auto-generated project files
-*.log
-*.jou
-*.str
-
-*.cache/
-*.runs/
-*.hw/
-*.ip_user_files/
-*.sim/
-*.webtalk/
-**/.Xil/
-
-# Project files that shouldn't be tracked
-*.xpr
-*.xpr.user
-*.wcfg
-*.xml
-*.backup.*
-*.dcp
-*.wdb
-*.vcd
-
-# Ignore Vivado project folders if placed inside lab folders
+# Group H/.gitignore  (good for anything under Group H/)
 vivado_proj/
 vivado_project/
+*.tcl
+runs/
+cache/
+*.log
+*.jou
+*.wdb
+*.vcd
 tb/
-create_project.tcl
-
-# Temporary or OS files
-.DS_Store
-Thumbs.db
-*.tmp
-*.bak
