@@ -1,0 +1,16 @@
+Team Members: Robert Lainez Torres & Dia Agrawal
+Assignment Overview
+ECE 3300 Lab 2 – ×16 Decoder Design on Nexys A7-100T FPGA
+• Gate-level (structural) coding in Verilog
+• Behavioral coding in Verilog (with color-coded comments)
+• Writing a self-checking testbench
+• Reading Vivado’s resource utilization and timing reports
+• Documenting your work in a clear, beginner-friendly report 
+
+CODE
+- xdc snippet and verilog code is attached in the folder named ECE3300L-Lab2-GroupR
+
+REPORT 
+- pdf report is attached containing screenshots and video link
+
+YOUTUBE LINK: https://www.youtube.com/watch?v=AU0JlCCPny4
