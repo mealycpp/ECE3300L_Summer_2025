@@ -9,6 +9,7 @@
 *.ip_user_files/
 *.sim/
 *.webtalk/
+**/.Xil/
 
 # Project files that shouldn't be tracked
 *.xpr
@@ -17,10 +18,14 @@
 *.xml
 *.backup.*
 *.dcp
+*.wdb
+*.vcd
 
 # Ignore Vivado project folders if placed inside lab folders
 vivado_proj/
 vivado_project/
+tb/
+create_project.tcl
 
 # Temporary or OS files
 .DS_Store
