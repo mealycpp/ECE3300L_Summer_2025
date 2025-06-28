@@ -1,0 +1,12 @@
+Lab 2
+Kevin Yu and Noah Bocanegra
+You will design, simulate, and implement a 4-to-16 decoder with an enable input. When
+enabled, exactly one of 16 outputs goes HIGH based on the 4-bit input; when disabled, all
+outputs are LOW. You will practice:
+• Gate-level (structural) coding in Verilog
+• Behavioral coding in Verilog (with color-coded comments)
+• Writing a self-checking testbench
+• Reading Vivado’s resource utilization and timing reports
+• Documenting your work in a clear, beginner-friendly report
+
+Youtube link: https://youtube.com/shorts/SuwfFToTyY4?feature=share

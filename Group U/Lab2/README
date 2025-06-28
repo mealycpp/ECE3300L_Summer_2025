@@ -1,0 +1,11 @@
+Lab 2
+
+In this lab we design a 4x16 decoder in Verilog
+
+We were able to verify results via a written Testbench
+We were able to analyze LUT and FF count with and analyze utilization data
+Succeded in designing a 4x16 decoder with behavioural and gate level logic in which 4 inputs activated 1 of 16 outputs, represented by switches and LEDs respectively. 
+
+Authors:
+Justin Herrera
+Nathan Rahbar
