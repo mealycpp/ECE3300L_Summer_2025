@@ -23,7 +23,7 @@
 module debounce(
     input clk,
     input btn_in,
-    output btn_clean
+    output reg btn_clean
     );
     reg [2:0] shift_reg;
  

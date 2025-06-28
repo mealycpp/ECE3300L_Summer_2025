@@ -24,7 +24,7 @@ module toggle_switch(
     input clk,
     input rst,
     input btn_raw,
-    output state
+    output reg state
     );
     wire btn_clean;
     reg btn_prev;
@@ -33,11 +33,12 @@ module toggle_switch(
     
     always @(posedge clk) begin
         if (rst) begin
-             state <= 0;
-             btn_prev <= 0;
+             state <= 1'b0;
+             btn_prev <= 1'b0;
         end else begin
-             if (btn_clean && !btn_prev)
+             if (btn_clean && !btn_prev) begin
                 state <= ~state;
+                end
              btn_prev <= btn_clean;
         end
     end
