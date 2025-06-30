@@ -1,12 +1,12 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: Cal Poly Pomona
+// Engineer: ECE
 // 
 // Create Date: 06/30/2025 11:50:35 AM
 // Design Name: 
 // Module Name: tb_mux16x1
-// Project Name: 
+// Project Name: tb_mux16x1
 // Target Devices: 
 // Tool Versions: 
 // Description: 
@@ -33,7 +33,7 @@ module tb_mux16x1;
         .out(out_tb)
     );
 
-    integer i;  // ✅ Declare loop variable OUTSIDE the initial block
+    integer i;  //  Declare loop variable
 
     initial begin
         // Initialize inputs
