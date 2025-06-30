@@ -1,12 +1,12 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: Cal Poly Pomona
+// Engineer: ECE
 // 
 // Create Date: 06/30/2025 11:34:03 AM
 // Design Name: 
 // Module Name: toggle_switch
-// Project Name: 
+// Project Name: toggle_switch
 // Target Devices: 
 // Tool Versions: 
 // Description: 
