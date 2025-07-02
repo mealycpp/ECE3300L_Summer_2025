@@ -80,7 +80,7 @@ module tb_top_mux_lab3();
         #50;
         
         if (singleLEDOutput !== 1'b1)
-            $display("FAIL: Expected LED to be ON for input[3], got %b", singleLEDOutput);
+            $display("FAIL: Expected LED to be ON for input[12], got %b", singleLEDOutput);
         else
             $display("PASS: Correct output"); 
         
@@ -117,7 +117,7 @@ module tb_top_mux_lab3();
         #50;
         
         if (singleLEDOutput !== 1'b1)
-            $display("FAIL: Expected LED to be ON for input[3], got %b", singleLEDOutput);
+            $display("FAIL: Expected LED to be ON for input[15], got %b", singleLEDOutput);
         else
             $display("PASS: Correct output"); 
         
