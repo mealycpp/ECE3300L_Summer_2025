@@ -125,9 +125,8 @@ module tb_top_mux_lab3();
         resetButtonActiveHigh = 1;
         #30;
         resetButtonActiveHigh = 0;
-        
         #30;
-            $finish;
+        $finish;
     end
 
 endmodule
