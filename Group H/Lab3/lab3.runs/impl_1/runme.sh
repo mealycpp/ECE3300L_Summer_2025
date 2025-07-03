@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/arvin/Desktop/ECE3300L_Summer_2025/Group H/Lab3/lab3.runs/impl_1'
+HD_PWD='D:/verilog/ece3300l/Group H/Lab3/lab3.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -42,7 +42,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log top_mux_lab3.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_mux_lab3.tcl -notrace
 
 

@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:{C:/Users/arvin/Desktop/ECE3300L_Summer_2025/Group H/Lab3/lab3.srcs/constrs_1/new/nexys-a7-100t-master.xdc} rfile:../../../lab3.srcs/constrs_1/new/nexys-a7-100t-master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:{D:/verilog/ece3300l/Group H/Lab3/lab3.srcs/constrs_1/new/nexys-a7-100t-master.xdc} rfile:../../../lab3.srcs/constrs_1/new/nexys-a7-100t-master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN E3 [get_ports clk]
 set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]

@@ -10,12 +10,12 @@ module mux16x1 (
 
   genvar i;
   generate
-    for (i = 0; i < 8; i = i + 1)
-      mux2x1 m1 (.a(in[2*i]), .b(in[2*i+1]), .sel(sel[0]), .y(level1[i]));
-    for (i = 0; i < 4; i = i + 1)
-      mux2x1 m2 (.a(level1[2*i]), .b(level1[2*i+1]), .sel(sel[1]), .y(level2[i]));
-    for (i = 0; i < 2; i = i + 1)
-      mux2x1 m3 (.a(level2[2*i]), .b(level2[2*i+1]), .sel(sel[2]), .y(level3[i]));
+    for (i = 0; i < 8; i = i + 1) begin : g_l1
+      mux2x1 m1 (.a(in[2*i]), .b(in[2*i+1]), .sel(sel[0]), .y(level1[i])); end
+    for (i = 0; i < 4; i = i + 1) begin : g_l2
+      mux2x1 m2 (.a(level1[2*i]), .b(level1[2*i+1]), .sel(sel[1]), .y(level2[i])); end
+    for (i = 0; i < 2; i = i + 1) begin : g_l3
+      mux2x1 m3 (.a(level2[2*i]), .b(level2[2*i+1]), .sel(sel[2]), .y(level3[i])); end
     mux2x1 m4 (.a(level3[0]), .b(level3[1]), .sel(sel[3]), .y(out));
   endgenerate
 endmodule

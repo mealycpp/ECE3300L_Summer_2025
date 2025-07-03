@@ -1,0 +1,11 @@
+0.7
+2020.2
+May 22 2025
+00:13:55
+D:/verilog/ece3300l/Group H/Lab3/lab3.sim/sim_1/behav/xsim/glbl.v,1741209010,verilog,,,,glbl,,,,,,,,
+D:/verilog/ece3300l/Group H/Lab3/lab3.srcs/sources_1/new/debounce.v,1751330067,verilog,,D:/verilog/ece3300l/Group H/Lab3/lab3.srcs/sources_1/new/mux16x1.v,,debounce,,,C:/Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+D:/verilog/ece3300l/Group H/Lab3/lab3.srcs/sources_1/new/mux16x1.v,1751416753,verilog,,D:/verilog/ece3300l/Group H/Lab3/lab3.srcs/sources_1/new/mux2x1.v,,mux16x1,,,C:/Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+D:/verilog/ece3300l/Group H/Lab3/lab3.srcs/sources_1/new/mux2x1.v,1751330067,verilog,,D:/verilog/ece3300l/Group H/Lab3/lab3TB/tb_top_mux_lab3.v,,mux2x1,,,C:/Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+D:/verilog/ece3300l/Group H/Lab3/lab3.srcs/sources_1/new/toggle_switch.v,1751330067,verilog,,D:/verilog/ece3300l/Group H/Lab3/lab3.srcs/sources_1/new/top_mux_lab3.v,,toggle_switch,,,C:/Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+D:/verilog/ece3300l/Group H/Lab3/lab3.srcs/sources_1/new/top_mux_lab3.v,1751417969,verilog,,D:/verilog/ece3300l/Group H/Lab3/lab3TB/tb_top_mux_lab3.v,,top_mux_lab3,,,C:/Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+D:/verilog/ece3300l/Group H/Lab3/lab3TB/tb_top_mux_lab3.v,1751422183,verilog,,,,tb_mux16x1,,,C:/Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,

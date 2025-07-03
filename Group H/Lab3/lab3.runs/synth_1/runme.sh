@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/arvin/Desktop/ECE3300L_Summer_2025/Group H/Lab3/lab3.runs/synth_1'
+HD_PWD='D:/verilog/ece3300l/Group H/Lab3/lab3.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

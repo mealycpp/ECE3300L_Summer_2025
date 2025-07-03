@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date         : Mon Jun 30 16:14:12 2025
-| Host         : ArvinGhaloosian running 64-bit major release  (build 9200)
+| Date         : Mon Jun 30 18:52:28 2025
+| Host         : ASTROFRANK running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_mux_lab3_drc_routed.rpt -pb top_mux_lab3_drc_routed.pb -rpx top_mux_lab3_drc_routed.rpx
 | Design       : top_mux_lab3
 | Device       : xc7a100tcsg324-1

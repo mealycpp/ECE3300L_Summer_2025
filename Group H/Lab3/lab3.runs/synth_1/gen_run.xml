@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1751325158">
-  <File Type="PA-TCL" Name="top_mux_lab3.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="top_mux_lab3_drc_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1751334646" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top_mux_lab3.dcp">
   <File Type="REPORTS-TCL" Name="top_mux_lab3_reports.tcl"/>
+  <File Type="RDS-UTIL" Name="mux16x1_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="mux16x1_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="top_mux_lab3.tcl"/>
   <File Type="RDS-RDS" Name="top_mux_lab3.vds"/>
-  <File Type="RDS-UTIL" Name="top_mux_lab3_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="top_mux_lab3_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="top_mux_lab3.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="top_mux_lab3_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="top_mux_lab3_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/debounce.v">
@@ -66,6 +63,14 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/top_mux_lab3.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>

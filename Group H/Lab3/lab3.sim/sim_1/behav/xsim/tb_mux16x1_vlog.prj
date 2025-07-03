@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "C:/Xilinx/2025.1/Vivado/data/rsb/busdef" \
+"../../../../lab3.srcs/sources_1/new/mux16x1.v" \
+"../../../../lab3.srcs/sources_1/new/mux2x1.v" \
+"../../../../lab3TB/tb_top_mux_lab3.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date         : Mon Jun 30 16:14:14 2025
-| Host         : ArvinGhaloosian running 64-bit major release  (build 9200)
+| Date         : Mon Jun 30 18:52:30 2025
+| Host         : ASTROFRANK running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file top_mux_lab3_timing_summary_routed.rpt -pb top_mux_lab3_timing_summary_routed.pb -rpx top_mux_lab3_timing_summary_routed.rpx -warn_on_violation
 | Design       : top_mux_lab3
 | Device       : 7a100t-csg324

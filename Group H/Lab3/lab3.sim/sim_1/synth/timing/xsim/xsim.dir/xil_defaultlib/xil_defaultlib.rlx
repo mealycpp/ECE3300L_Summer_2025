@@ -1,0 +1,6 @@
+0.7
+2020.2
+May 22 2025
+00:13:55
+D:/verilog/ece3300l/Group H/Lab3/lab3.sim/sim_1/synth/timing/xsim/tb_lab3_time_synth.v,1751337330,verilog,,D:/verilog/ece3300l/Group H/Lab3/lab3TB/tb_top_mux_lab3.v,,debounce;debounce_0;debounce_1;debounce_2;debounce_6;debounce_7;debounce_8;debounce_9;glbl;toggle_switch;toggle_switch_3;toggle_switch_4;toggle_switch_5;top_mux_lab3,,,C:/Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+D:/verilog/ece3300l/Group H/Lab3/lab3TB/tb_top_mux_lab3.v,1751337151,verilog,,,,tb_lab3,,,C:/Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
