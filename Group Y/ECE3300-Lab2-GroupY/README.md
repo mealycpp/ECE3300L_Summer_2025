@@ -1,4 +1,4 @@
-# ECE3300-Lab1-GroupY
+# ECE3300-Lab2-GroupY
 Lab 2 4 to 16 Decoder
 
 Members: Heba Hafez and Sean Wygant
