@@ -1,6 +1,4 @@
 # Group H/.gitignore  (good for anything under Group H/)
-vivado_proj/
-vivado_project/
 *.tcl
 runs/
 cache/
