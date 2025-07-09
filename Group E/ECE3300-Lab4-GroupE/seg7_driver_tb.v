@@ -22,12 +22,10 @@
 module seg7_driver_tb(
 );
 
-  // Inputs 
+  //input and output
   reg clk_tb;
   reg rst_n;
   reg [31:0] SW_tb;
-
-  // Outputs
   wire [6:0] Cnode_tb;
   wire [7:0] AN_tb;
   wire dp_tb;
@@ -44,7 +42,6 @@ module seg7_driver_tb(
 
   // 100 MHz clock (10 ns period)
   always #5 clk_tb = ~clk_tb;
-
   initial begin
     // Initialize signals
     clk_tb = 0;
