@@ -22,11 +22,13 @@
 module seg7_driver(
     input clk,
     input rst_n,
-    input [31:0] SW,
+    input [15:0] SW,
     output reg [6:0] Cnode,
     output dp,
-    output [7:0] AN
+    output [7:0] AN,
+    output [15:0] LED
 );
+    assign LED = SW[15:0];
     reg [19:0] tmp;
     reg [3:0] digit;
     
@@ -50,11 +52,11 @@ module seg7_driver(
     
     always@(s, SW)
         case (s)
-            3'd0:digit=SW[3:0]; 3'd1:digit=SW[7:4];
-            3'd2:digit=SW[11:8]; 3'd3:digit=SW[15:12];
-            3'd4:digit=SW[19:16];3'd5:digit=SW[23:20];
-            3'd6:digit=SW[27:24];3'd7:digit=SW[31:28];
-            default:digit=4'b0000;
+          3'd0: digit = SW[3:0];
+          3'd1: digit = SW[7:4];
+          3'd2: digit = SW[11:8];
+          3'd3: digit = SW[15:12];
+          default: digit = 4'b0000;
         endcase
         
     reg [7:0] AN_tmp;
