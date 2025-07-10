@@ -15,9 +15,6 @@ module seg7_driver
     output wire [7:0]  AN
 );
 
-    /* --------------------------------------------------------------------- */
-    /* Lookup-table: 4-bit hex → 7-segment pattern (active-low)             */
-    /* --------------------------------------------------------------------- */
     reg [3:0] digit;
     always @* begin
         case (digit)
@@ -41,9 +38,6 @@ module seg7_driver
         endcase
     end
 
-    /* --------------------------------------------------------------------- */
-    /* Clock divider → ~95 Hz digit refresh                                  */
-    /* --------------------------------------------------------------------- */
     reg [19:0] tmp;
     always @(posedge clk or negedge rst_n)
         if (!rst_n)
@@ -53,9 +47,6 @@ module seg7_driver
 
     wire [2:0] s = tmp[19:17];   // selects one of eight digits
 
-    /* --------------------------------------------------------------------- */
-    /* Multiplexer: choose nibble for current digit                          */
-    /* --------------------------------------------------------------------- */
     always @* begin
         case (s)
             3'd0: digit = SW[ 3: 0];
@@ -70,9 +61,6 @@ module seg7_driver
         endcase
     end
 
-    /* --------------------------------------------------------------------- */
-    /* Generate active-low anode enable lines                                */
-    /* --------------------------------------------------------------------- */
     reg [7:0] AN_tmp;
     always @* begin
         case (s)
@@ -89,9 +77,6 @@ module seg7_driver
     end
     assign AN = AN_tmp;
 
-    /* --------------------------------------------------------------------- */
-    /* Decimal point disabled (high)                                         */
-    /* --------------------------------------------------------------------- */
     assign dp = 1'b1;
 
 endmodule
