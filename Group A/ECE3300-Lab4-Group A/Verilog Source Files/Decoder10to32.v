@@ -21,19 +21,18 @@
 
 
 module Decoder10to32(
-    input [1:0] selectPart,
-    input [7:0] partValue,
+    input [9:0] SW_in,
     output reg [31:0] out
     );
     
     initial out = 32'd0;
     
     always @(*) begin
-        case (selectPart)
-            2'b00: out[7:0] = partValue;
-            2'b01: out[15:8] = partValue;
-            2'b10: out[23:16] = partValue;
-            2'b11: out[31:24] = partValue;
+        case (SW_in[9:8])
+            2'b00: out[7:0] = SW_in;
+            2'b01: out[15:8] = SW_in;
+            2'b10: out[23:16] = SW_in;
+            2'b11: out[31:24] = SW_in;
         endcase
     end
 endmodule
