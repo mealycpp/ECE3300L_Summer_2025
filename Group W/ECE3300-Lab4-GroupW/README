@@ -1,0 +1,9 @@
+ECE 3300 Lab 4 – Switch to 7-Segment Display Interface
+
+Members: Jetts Crittenden & Evan Tram
+
+Objective: Translate 4-bit switch inputs (0-15) into proper patterns for display.
+           Implement structural Verilog modules including decoders, multiplexers, and verify via simulation.
+           Interface slide switches, LEDs, and the 8-digit 7-segment display on the Nexys A7 FPGA.
+
+Video Demo: 
