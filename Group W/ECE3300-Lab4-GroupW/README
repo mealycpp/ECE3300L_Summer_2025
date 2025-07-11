@@ -6,4 +6,4 @@ Objective: Translate 4-bit switch inputs (0-15) into proper patterns for display
            Implement structural Verilog modules including decoders, multiplexers, and verify via simulation.
            Interface slide switches, LEDs, and the 8-digit 7-segment display on the Nexys A7 FPGA.
 
-Video Demo: 
+Video Demo: https://youtu.be/24z85Tas4oo?si=Gn3qJsFoKFkw4eSZ 
