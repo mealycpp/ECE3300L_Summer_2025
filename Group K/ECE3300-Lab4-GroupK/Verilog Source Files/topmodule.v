@@ -1,15 +1,15 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: Cal Poly Pomona
+// Engineer: Andy Siu
 // 
 // Create Date: 07/10/2025 10:49:17 AM
-// Design Name: 
+// Design Name: Top Module
 // Module Name: topmodule
-// Project Name: 
-// Target Devices: 
+// Project Name: Top Module
+// Target Devices: Nexys A7 100T
 // Tool Versions: 
-// Description: 
+// Description: This is the top module implementation of the 7 segment display
 // 
 // Dependencies: 
 // 
@@ -32,7 +32,6 @@ module topmodule(
 
     assign led = SW;
 
-    // Duplicate each 4-bit group
     wire [31:0] sw = {
         SW[15:12], // digit 8 (AN[7])
         SW[11:8],  // digit 7 (AN[6])
