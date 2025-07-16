@@ -68,8 +68,8 @@ module top_lab5 (
 
 
     // 5. LEDs
-  assign LED[4:0] = SW;                      // Switch setting
+    assign LED[4:0] = SW;                      // Switch setting
     assign LED[8:5] = {digit1, digit0};      // BCD value
-  assign LED[9]   = clk_out;                 // Clock
+    assign LED[9]   = clk_out;                 // Clock
 
 endmodule
