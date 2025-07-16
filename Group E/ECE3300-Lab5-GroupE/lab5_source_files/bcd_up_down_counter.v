@@ -27,39 +27,46 @@ module bcd_up_down_counter(
     output reg [3:0] digit1  // Tens digit
 );
 
+    reg [3:0] next_digit0, next_digit1;
+    reg carry;  // carry or borrow digit flag
+
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
-            digit0 <= 4'd0; // Reset both digits to 00
-            digit1 <= 4'd0;
-        end
-        else begin
-            if (dir) begin
-                // COUNT UP
-                if (digit0 == 4'd9) begin
-                    digit0 <= 4'd0;
-                    if (digit1 == 4'd9)
-                        digit1 <= 4'd0;
-                    else
-                        digit1 <= digit1 + 4'd1;
-                end
-                else begin
-                    digit0 <= digit0 + 4'd1;
-                end
-            end
-            else begin
-                // COUNT DOWN
-                if (digit0 == 4'd0) begin
-                    digit0 <= 4'd9;
-                    if (digit1 == 4'd0)
-                        digit1 <= 4'd9;
-                    else
-                        digit1 <= digit1 - 4'd1;
-                end
-                else begin
-                    digit0 <= digit0 - 4'd1;
-                end
-            end
+            digit0 <= 0;
+            digit1 <= 0;
+        end else begin
+            digit0 <= next_digit0;
+            digit1 <= next_digit1;
         end
     end
 
+    always @(*) begin
+        next_digit0 = digit0;
+        next_digit1 = digit1;
+        carry = 0;
+
+        if (dir) begin
+            // Count Up
+            if (digit0 == 9) begin
+                next_digit0 = 0;
+                if (digit1 == 9)
+                    next_digit1 = 0;
+                else
+                    next_digit1 = digit1 + 1;
+            end else begin
+                next_digit0 = digit0 + 1;
+            end
+        end else begin
+            // Count Down
+            if (digit0 == 0) begin
+                next_digit0 = 9;
+                if (digit1 == 0)
+                    next_digit1 = 9;
+                else
+                    next_digit1 = digit1 - 1;
+            end else begin
+                next_digit0 = digit0 - 1;
+            end
+        end
+    end
 endmodule
