@@ -3,10 +3,10 @@
 // Company: Cal Poly Pomona
 // Engineer: ECE
 // 
-// Create Date: 07/16/2025 11:05:54 AM
+// Create Date: 07/16/2025 11:24:26 AM
 // Design Name: 
-// Module Name: mux32x1
-// Project Name: mux32x1
+// Module Name: seg7_scan
+// Project Name: seg7_scan
 // Target Devices: 
 // Tool Versions: 
 // Description: 
