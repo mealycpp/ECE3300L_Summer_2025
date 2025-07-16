@@ -5,8 +5,8 @@
 // 
 // Create Date: 07/16/2025 11:05:54 AM
 // Design Name: 
-// Module Name: clock_divider
-// Project Name: clock_divider
+// Module Name: mux32x1
+// Project Name: mux32x1
 // Target Devices: 
 // Tool Versions: 
 // Description: 
