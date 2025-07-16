@@ -3,10 +3,10 @@
 // Company: Cal Poly Pomona
 // Engineer: ECE
 // 
-// Create Date: 07/16/2025 11:00:32 AM
+// Create Date: 07/16/2025 11:15:27 AM
 // Design Name: 
-// Module Name: clock_divider
-// Project Name: clock_divider
+// Module Name: bcd_up_down_counter
+// Project Name: bcd_up_down_counter
 // Target Devices: 
 // Tool Versions: 
 // Description: 
