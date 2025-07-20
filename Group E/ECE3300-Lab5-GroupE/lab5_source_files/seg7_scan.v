@@ -1,10 +1,22 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: Cal Poly Pomona
-// Engineer: ECE3300
+// Engineer: ECE
 // 
+// Create Date: 07/20/2025 01:16:54 AM
+// Design Name: 
 // Module Name: seg7_scan
-// Description: 4-digit 7-segment scan driver with multiplexing support
+// Project Name: seg7_scan
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
 //////////////////////////////////////////////////////////////////////////////////
 
 module seg7_scan(
@@ -44,7 +56,7 @@ module seg7_scan(
         endcase
     end
 
-    // Select which anode (digit) to enable (active low)
+    // Select which anode (digit) to enable 
     always @(*) begin
         case (sel)
             2'd0: an = 4'b1110;  // enable digit0 (rightmost)
