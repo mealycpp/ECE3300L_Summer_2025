@@ -26,7 +26,7 @@ module top_lab5 (
     input  [4:0] SW,      
     output [6:0] SEG,     // Segments a–g 
     output [1:0] AN,      
-    output [9:0] LED      
+    output [12:0] LED      
 );
 
   // 1. Instantiate clock divider 
@@ -69,7 +69,7 @@ module top_lab5 (
 
     // 5. LEDs
     assign LED[4:0] = SW;                        // Switch setting
-    assign LED[8:5] = {digit1, digit0};          // BCD value
-    assign LED[9]   = clk_out;                   // Clock
+    assign LED[8:5] = digit0;          // BCD value
+    assign LED[12:9]   = digit1;                   // BCD ten value
 
 endmodule
