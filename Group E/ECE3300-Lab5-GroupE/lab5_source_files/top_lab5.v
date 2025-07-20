@@ -3,7 +3,7 @@
 // Company: Cal Poly Pomona
 // Engineer: ECE
 // 
-// Create Date: 07/16/2025 11:40:52 AM
+// Create Date: 07/20/2025 01:36:21 AM
 // Design Name: 
 // Module Name: top_lab5
 // Project Name: top_lab5
@@ -68,8 +68,8 @@ module top_lab5 (
 
 
     // 5. LEDs
-    assign LED[4:0] = SW;                        // Switch setting
-    assign LED[8:5] = digit0;          // BCD value
+    assign LED[4:0] = SW;                          // Switch setting
+    assign LED[8:5] = digit0;                      // BCD value
     assign LED[12:9]   = digit1;                   // BCD ten value
 
 endmodule
