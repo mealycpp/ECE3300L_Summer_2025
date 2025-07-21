@@ -1,0 +1,11 @@
+ECE 3300 Lab 5 – BCD Up/Down Counter on 7-Segment Display
+
+Members: Jetts Crittenden & Evan Tram
+
+Objective: Design a two‑digit BCD up/down counter in Verilog-HDL.
+           Implement a clock-divider with a 32‑bit counter + 32×1 Mux and 5 SW speed select.
+           Control counting direction via BTN1 (Up/Down) and reset via BTN0.
+           Drive a dual‑digit 7‑segment display using multiplexing.
+           Deploy on Nexys A7: simulate, synthesize, program, and test.
+
+Video Demo: https://youtu.be/Dry0O3-prio?si=hrmUwiDbmuPtNf8r
