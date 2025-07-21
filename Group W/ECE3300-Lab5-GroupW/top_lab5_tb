@@ -1,0 +1,47 @@
+`timescale 1ns / 1ps
+
+module top_lab5_tb(
+
+    );
+    
+    reg CLK_tb;
+    reg [4:0] SW_tb;
+    reg RST_tb; // reset 
+    reg BTN1_tb; // dir
+    wire [4:0] LED_SW_tb;
+    wire [7:0] LED_BCD_tb;
+    wire [6:0] SEG_tb;
+    wire [7:0] AN_tb;
+    
+    top_lab5 tb(
+        .CLK(CLK_tb),
+        .SW(SW_tb),
+        .RST(RST_tb),
+        .BTN1(BTN1_tb),
+        .LED_SW(LED_SW_tb),
+        .LED_BCD(LED_BCD_tb),
+        .SEG(SEG_tb),
+        .AN(AN_tb)
+    );
+    
+    always #5 CLK_tb = ~CLK_tb;
+    
+    initial
+        begin
+            CLK_tb = 0;
+            SW_tb = 5'd31; // fastest        
+            RST_tb = 0;         
+            BTN1_tb = 0;
+            #100
+            
+            RST_tb = 1; #40; RST_tb = 0;
+            repeat (10) @(posedge CLK_tb);
+            
+            BTN1_tb = 1;
+            RST_tb = 1; #40; RST_tb = 0;
+            repeat (10) @(posedge CLK_tb); 
+            
+            $finish;
+        end
+    
+endmodule
