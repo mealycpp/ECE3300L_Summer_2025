@@ -35,20 +35,20 @@ module top_lab5(
 
     assign rst_n = ~BTN[0];
 
-    // Instantiate clock divider
+    //clock divider
     clock_divider cd (
         .clk(clk),
         .cnt(cnt)
     );
 
-    // Instantiate Mux
+    // Mux
     mux32x1 mux (
         .cnt(cnt),
         .sel(SW),
         .clk_out(clk_out)
     );
 
-    // Instantiate BCD counter
+    // BCD counter
     bcd_up_down_counter bcd (
         .clk_out(clk_out),
         .rst_n(rst_n),
@@ -57,7 +57,7 @@ module top_lab5(
         .digit1(digit1)
     );
 
-    // Instantiate 7-segment scan
+    // 7-segment scan
     seg7_scan scan (
         .clk(clk),
         .digit0(digit0),
