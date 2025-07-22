@@ -4,11 +4,11 @@
 // Engineer: Jared Mocling and Kevin Tang
 // 
 // Create Date: 07/21/2025 03:53:21 PM
-// Design Name: Lab 5
+// Design Name: BCD Up/Down Counter on 7‑Segment Display
 // Module Name: top_lab5
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
+// Project Name: Lab 5
+// Target Devices: Nexys A7-100T
+// Tool Versions: Vivado 2025.1
 // Description: 
 // 
 // Dependencies: 
