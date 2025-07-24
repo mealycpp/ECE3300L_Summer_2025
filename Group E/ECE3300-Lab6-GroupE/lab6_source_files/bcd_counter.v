@@ -1,4 +1,23 @@
 `timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: Cal Poly Pomona
+// Engineer: ECE
+// 
+// Create Date: 07/24/2025 11:19:25 AM
+// Design Name: 
+// Module Name: bcd_counter
+// Project Name: bcd_counter
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
 
 module bcd_counter(
     input clk,
