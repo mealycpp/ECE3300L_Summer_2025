@@ -20,21 +20,27 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module bcd_counter_tb (
-    input clk,
-    input rst_n,
-    input dir,            // 1 = up, 0 = down
-    output reg [3:0] bcd
+    reg clk = 0;
+    reg rst_n = 0;
+    reg dir = 1;  // 1 = up, 0 = down
+    wire [3:0] bcd;
 );
 
-    always @(posedge clk or negedge rst_n) begin
-        if (!rst_n)
-            bcd <= 0;
-        else begin
-            if (dir) begin
-                bcd <= (bcd == 9) ? 0 : bcd + 1;
-            end else begin
-                bcd <= (bcd == 0) ? 9 : bcd - 1;
-            end
-        end
-    end
+    bcd_counter uut (
+    .clk(clk),
+    .rst_n(rst_n),
+    .dir(dir),
+    .bcd(bcd)
+  );
+
+  always #10 clk = ~clk;
+
+  initial begin
+    rst_n = 0; #20;
+    rst_n = 1;
+    #200;
+    dir = 0;
+    #200;
+    $stop;
+  end
 endmodule
