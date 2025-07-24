@@ -1,3 +1,24 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: Cal Poly Pomona
+// Engineer: ECE
+// 
+// Create Date: 07/24/2025 12:04:28 PM
+// Design Name: 
+// Module Name: seg7_scan_tb
+// Project Name: seg7_scan_tb
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
 module seg7_scan_tb;
   reg clk = 0;
   reg rst_n = 0;
