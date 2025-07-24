@@ -1,12 +1,31 @@
 `timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: Cal Poly Pomona
+// Engineer: ECE
+// 
+// Create Date: 07/24/2025 11:33:44 AM
+// Design Name: 
+// Module Name: top_lab6
+// Project Name: top_lab6
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
 
 module top_lab6(
     input clk,
     input rst_n,
-    input [8:0] SW,     // SW0–SW8
+    input [8:0] SW,     
     output [6:0] seg,
     output [2:0] an,
-    output [7:0] LED    // LED[3:0] = units BCD, LED[7:4] = tens BCD
+    output [7:0] LED    
 );
 
     wire [31:0] cnt;
