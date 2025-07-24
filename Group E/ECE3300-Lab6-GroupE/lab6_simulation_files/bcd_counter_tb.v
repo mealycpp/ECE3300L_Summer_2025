@@ -29,7 +29,7 @@ module bcd_counter_tb;
     .clk(clk),
     .rst_n(rst_n),
     .dir(dir),
-    .bcd(bcd)
+    .BCD(bcd)
   );
 
   always #10 clk = ~clk;
