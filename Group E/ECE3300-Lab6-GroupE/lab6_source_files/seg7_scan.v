@@ -1,4 +1,23 @@
 `timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: Cal Poly Pomona
+// Engineer: ECE
+// 
+// Create Date: 07/24/2025 11:31:41 AM
+// Design Name: 
+// Module Name: seg7_scan
+// Project Name: seg7_scan
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
 
 module seg7_scan(
     input clk,
