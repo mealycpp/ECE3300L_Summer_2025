@@ -19,11 +19,10 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module alu_tb (
-  reg [3:0] A, B,
-  reg [1:0] ctrl,
-  wire [7:0] result,
-);
+module alu_tb;
+  reg [3:0] A, B;
+  reg [1:0] ctrl;
+  wire [7:0] result;
 
   alu uut (
     .A(A),
