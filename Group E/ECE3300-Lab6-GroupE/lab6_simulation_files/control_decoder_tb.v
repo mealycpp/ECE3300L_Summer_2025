@@ -18,10 +18,9 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module control_decoder_tb (
+module control_decoder_tb;
   reg [3:0] ctrl_in;
-  wire [3:0] ctrl_nibble
-);
+  wire [3:0] ctrl_nibble;
   
   control_decoder uut (
     .ctrl_in(ctrl_in),
