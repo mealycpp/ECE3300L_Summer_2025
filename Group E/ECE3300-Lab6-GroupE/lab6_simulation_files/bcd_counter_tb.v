@@ -19,12 +19,11 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module bcd_counter_tb (
-    reg clk = 0;
-    reg rst_n = 0;
-    reg dir = 1;  // 1 = up, 0 = down
-    wire [3:0] bcd;
-);
+module bcd_counter_tb;
+  reg clk = 0;
+  reg rst_n = 0;
+  reg dir = 1;  // 1 = up, 0 = down
+  wire [3:0] bcd;
 
     bcd_counter uut (
     .clk(clk),
