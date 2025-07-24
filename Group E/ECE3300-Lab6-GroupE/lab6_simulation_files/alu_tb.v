@@ -20,16 +20,23 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module alu_tb (
-    input [3:0] A,  // Units BCD
-    input [3:0] B,  // Tens BCD
-    input [1:0] ctrl, // 00 = add, 01 = sub
-    output reg [7:0] result
+  reg [3:0] A, B;
+  reg [1:0] ctrl;
+  wire [7:0] result;
 );
-    always @(*) begin
-        case (ctrl)
-            2'b00: result = A + B;
-            2'b01: result = A - B;
-            default: result = 0;
-        endcase
-    end
+
+  alu uut (
+    .A(A),
+    .B(B),
+    .ctrl(ctrl),
+    .result(result)
+  );
+
+  initial begin
+    A = 4'd6; B = 4'd3; ctrl = 2'b00; #10;
+    A = 4'd6; B = 4'd3; ctrl = 2'b01; #10;
+    A = 4'd3; B = 4'd6; ctrl = 2'b01; #10;
+    ctrl = 2'b10; #10;
+    $stop;
+  end
 endmodule
