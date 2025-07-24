@@ -1,0 +1,37 @@
+`timescale 1ns / 1ps
+
+module top_lab6(
+    input clk,
+    input rst_n,
+    input [8:0] SW,     // SW0–SW8
+    output [6:0] seg,
+    output [2:0] an,
+    output [7:0] LED    // LED[3:0] = units BCD, LED[7:4] = tens BCD
+);
+
+    wire [31:0] cnt;
+    wire clk_div;
+    wire [3:0] units, tens, ctrl_nibble;
+    wire [7:0] result;
+
+    clock_divider U0 (.clk(clk), .rst_n(rst_n), .cnt(cnt));
+    mux32x1 U1 (.cnt(cnt), .sel(SW[4:0]), .clk_out(clk_div));
+
+    bcd_counter U2 (.clk(clk_div), .rst_n(rst_n), .dir(SW[7]), .BCD(units));
+    bcd_counter U3 (.clk(clk_div), .rst_n(rst_n), .dir(SW[8]), .BCD(tens));
+
+    alu U4 (.A(units), .B(tens), .ctrl(SW[6:5]), .result(result));
+
+    control_decoder U5 (.ctrl_in(SW[8:5]), .ctrl_out(ctrl_nibble));
+
+    seg7_scan U6 (
+        .clk(clk), .rst_n(rst_n),
+        .digit0(result[3:0]),
+        .digit1(result[7:4]),
+        .digit2(ctrl_nibble),
+        .seg(seg), .an(an)
+    );
+
+    assign LED[3:0] = units;
+    assign LED[7:4] = tens;
+endmodule
