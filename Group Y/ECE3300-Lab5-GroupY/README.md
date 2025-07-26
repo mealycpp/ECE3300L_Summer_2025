@@ -1,0 +1,8 @@
+# ECE3300-Lab5-GroupY
+Lab 5 Two Digit Counter With Speed Selection
+
+Members: Heba Hafez and Sean Wygant
+
+Lab Objective: Using a 32-bit counter clock divider, 32x1 Mux, and 5 SW speed selects, design a two digit BCD up/down counter in Verilog HDL. Have BTN0 as a reset and BTN1 as an up/down direction counter. 
+
+

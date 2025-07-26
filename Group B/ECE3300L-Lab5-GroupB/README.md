@@ -1,0 +1,3 @@
+Lab 5: BCD Up/Down Counter on 7‑Segment Display       
+By: Faris Khan and Nicholas Williams    
+Objective: The objective of this lab is to design and implement a two-digit BCD up/down counter using Verilog HDL and deploy it on the Nexys A7 FPGA board. The design uses modular components including a clock divider, a 32-to-1 multiplexer for speed control, a cascaded BCD counter, and a time-multiplexed 7-segment display driver. The system responds to user inputs for counting direction and reset, allows speed adjustment through switches, and displays the current BCD value on both the 7-segment display and onboard LEDs.   
