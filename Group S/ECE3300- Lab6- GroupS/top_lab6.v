@@ -34,7 +34,7 @@ wire [3:0] ctrl_nibble = SW[8:5];
 alu alu1(
 .A(unit_bcd),
 .B(tens_bcd),
-.ctrl({SW[5], SW[6]}),
+ .ctrl({SW[6], SW[5]}),
 .result(alu_result)
 );
 control_decoder dec(
