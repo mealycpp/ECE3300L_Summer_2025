@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date             : Sat Jul 26 14:07:25 2025
+| Date             : Sat Jul 26 16:54:07 2025
 | Host             : ASTROFRANK running 64-bit major release  (build 9200)
 | Command          : report_power -file top_lab6_power_routed.rpt -pb top_lab6_power_summary_routed.pb -rpx top_lab6_power_routed.rpx
 | Design           : top_lab6
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.140        |
+| Total On-Chip Power (W)  | 0.132        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.043        |
+| Dynamic (W)              | 0.035        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.4         |
@@ -53,16 +53,16 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      125 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       36 |     63400 |            0.06 |
-|   Register     |    <0.001 |       58 |    126800 |            0.05 |
-|   CARRY4       |    <0.001 |       12 |     15850 |            0.08 |
+| Slice Logic    |    <0.001 |      128 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       35 |     63400 |            0.06 |
+|   Register     |    <0.001 |       60 |    126800 |            0.05 |
+|   CARRY4       |    <0.001 |       13 |     15850 |            0.08 |
 |   F7/F8 Muxes  |    <0.001 |        4 |     63400 |           <0.01 |
 |   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |    <0.001 |      107 |       --- |             --- |
-| I/O            |     0.041 |       29 |       210 |           13.81 |
+| Signals        |    <0.001 |      110 |       --- |             --- |
+| I/O            |     0.033 |       29 |       210 |           13.81 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.140 |          |           |                 |
+| Total          |     0.132 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,8 +73,8 @@ Table of Contents
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Vccint    |       1.000 |     0.017 |       0.002 |      0.015 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.020 |       0.002 |      0.018 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.016 |       0.012 |      0.004 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.019 |       0.001 |      0.018 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.013 |       0.009 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -128,7 +128,7 @@ Table of Contents
 +-------------+--------+-----------------+
 | Clock       | Domain | Constraint (ns) |
 +-------------+--------+-----------------+
-| sys_clk_pin | clk    |            10.0 |
+| sys_clk_pin | CLK    |            10.0 |
 +-------------+--------+-----------------+
 
 
@@ -141,7 +141,7 @@ Table of Contents
 +----------+-----------+
 | Name     | Power (W) |
 +----------+-----------+
-| top_lab6 |     0.043 |
+| top_lab6 |     0.035 |
 +----------+-----------+
 
 

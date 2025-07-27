@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date         : Sat Jul 26 14:06:55 2025
+| Date         : Sat Jul 26 16:53:37 2025
 | Host         : ASTROFRANK running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_lab6_drc_opted.rpt -pb top_lab6_drc_opted.pb -rpx top_lab6_drc_opted.rpx
 | Design       : top_lab6
@@ -49,11 +49,11 @@ Related violations: <none>
 
 PLHOLDVIO-2#1 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT clock_divider_inst/bcd_out[3]_i_2 is driving clock pin of 8 cells. This could lead to large hold time violations. Involved cells are:
-tens_counter_inst/bcd_out_reg[0], tens_counter_inst/bcd_out_reg[1],
-tens_counter_inst/bcd_out_reg[2], tens_counter_inst/bcd_out_reg[3],
-units_counter_inst/bcd_out_reg[0], units_counter_inst/bcd_out_reg[1],
-units_counter_inst/bcd_out_reg[2], units_counter_inst/bcd_out_reg[3]
+A LUT clock_divider_inst/bcd[3]_i_2 is driving clock pin of 8 cells. This could lead to large hold time violations. Involved cells are:
+tens_counter_inst/bcd_reg[0], tens_counter_inst/bcd_reg[1],
+tens_counter_inst/bcd_reg[2], tens_counter_inst/bcd_reg[3],
+units_counter_inst/bcd_reg[0], units_counter_inst/bcd_reg[1],
+units_counter_inst/bcd_reg[2], units_counter_inst/bcd_reg[3]
 Related violations: <none>
 
 

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date         : Sat Jul 26 14:07:24 2025
+| Date         : Sat Jul 26 16:54:05 2025
 | Host         : ASTROFRANK running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_lab6_drc_routed.rpt -pb top_lab6_drc_routed.pb -rpx top_lab6_drc_routed.rpx
 | Design       : top_lab6
@@ -50,16 +50,16 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net clock_divider_inst/CLK is a gated clock net sourced by a combinational pin clock_divider_inst/bcd_out[3]_i_2/O, cell clock_divider_inst/bcd_out[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net clock_divider_inst/CLK is a gated clock net sourced by a combinational pin clock_divider_inst/bcd[3]_i_2/O, cell clock_divider_inst/bcd[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PLHOLDVIO-2#1 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT clock_divider_inst/bcd_out[3]_i_2 is driving clock pin of 8 cells. This could lead to large hold time violations. Involved cells are:
-tens_counter_inst/bcd_out_reg[0], tens_counter_inst/bcd_out_reg[1],
-tens_counter_inst/bcd_out_reg[2], tens_counter_inst/bcd_out_reg[3],
-units_counter_inst/bcd_out_reg[0], units_counter_inst/bcd_out_reg[1],
-units_counter_inst/bcd_out_reg[2], units_counter_inst/bcd_out_reg[3]
+A LUT clock_divider_inst/bcd[3]_i_2 is driving clock pin of 8 cells. This could lead to large hold time violations. Involved cells are:
+tens_counter_inst/bcd_reg[0], tens_counter_inst/bcd_reg[1],
+tens_counter_inst/bcd_reg[2], tens_counter_inst/bcd_reg[3],
+units_counter_inst/bcd_reg[0], units_counter_inst/bcd_reg[1],
+units_counter_inst/bcd_reg[2], units_counter_inst/bcd_reg[3]
 Related violations: <none>
 
 
