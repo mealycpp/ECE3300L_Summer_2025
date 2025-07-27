@@ -20,10 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
+
 module bcd_counter(
     input clk_div,//divided clock
     input BTN0,// active low reset
-    input [1:0] dir_bit, // direction bit
+    input dir_bit, // direction bit
     output reg [3:0] BCD // 4 bit BCD
     );
     always @(posedge clk_div or negedge BTN0) begin
@@ -47,3 +48,4 @@ module bcd_counter(
         end
     end
 endmodule
+
