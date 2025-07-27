@@ -1,7 +1,7 @@
 module top_lab6(
 input CLK,
 input BTN0,
-input  [8:0]  SW,         // SW[0-4]: clk_sel, SW[5-6]: ALU ctrl, SW[7]: units dir, SW[8]: tens dir
+input  [8:0]  SW,        
 output [7:0]  LED,
 output [7:0] AN,
 output [6:0] SEG 
@@ -15,19 +15,18 @@ clock_divider u_div(
 .clk_div(clk_out),
 .cnt(cnt)
 );
- wire [3:0] unit_bcd, tens_bcd, control_display;;
- wire [1:0] dir_bit;
+ wire [3:0] unit_bcd, tens_bcd, control_display;
  wire roll;
   bcd_counter bcd_count_ones(
   .clk_div(clk_out),
   .BTN0(!BTN0),
-  .dir_bit({1'b0,SW[7]}),
+  .dir_bit(SW[7]),
   .BCD(unit_bcd)
   );
   bcd_counter bcd_count_tens(
   .clk_div(clk_out),
   .BTN0(!BTN0),
-  .dir_bit({1'b0,SW[8]}),
+  .dir_bit(SW[8]),
   .BCD(tens_bcd)
   );
 wire [7:0] alu_result;
@@ -35,7 +34,7 @@ wire [3:0] ctrl_nibble = SW[8:5];
 alu alu1(
 .A(unit_bcd),
 .B(tens_bcd),
-.ctrl(ctrl_nibble),
+.ctrl({SW[5], SW[6]}),
 .result(alu_result)
 );
 control_decoder dec(
