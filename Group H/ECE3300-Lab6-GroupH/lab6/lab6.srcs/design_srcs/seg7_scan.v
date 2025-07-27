@@ -1,17 +1,16 @@
 `timescale 1ns / 1ps
 
 module seg7_scan(
-    input CLK,                  // clock (used to multiplex)
-    input rst_n,                // Active-low reset
+    input CLK,           
+    input rst_n,        
     input [11:0] bits,
-    output reg [6:0] SEG,       // Segment outputs (active low)
-    output [7:0] AN,         // 1 bit for each display, Digit select lines (active low)
+    output reg [6:0] SEG,     
+    output [7:0] AN,        
     output DP
 );
-    assign DP = 1'b1; // this turns off the decimal point
+    assign DP = 1'b1; 
     
     reg [3:0] digit;
-    // Based on digit, maps the Cnode segments to output 0 - F
     always@(digit)
     case(digit)
         4'd0:SEG=7'b0000001; 4'd1: SEG=7'b1001111; 4'd2: SEG=7'b0010010;
@@ -27,11 +26,8 @@ module seg7_scan(
     if(!rst_n) tmp<=0;
     else tmp<=tmp+1;
     
-    wire [1:0] s = tmp[18:17]; // need it like this so that AN[7-2] are turned off
-    
-    
-    // time-multiplexing
-    // lets all displays show at the same time based on the counter above 
+    wire [1:0] s = tmp[18:17];
+  
     always@(s, bits)
     case (s)
         2'd0:digit=bits[3:0]; 2'd1:digit=bits[7:4];
@@ -39,7 +35,6 @@ module seg7_scan(
         default:digit=4'b0000;
    endcase
 
-    //reg [0:0] AN_tmp;
     reg [7:0] AN_tmp;
     always@(s)
     case(s)

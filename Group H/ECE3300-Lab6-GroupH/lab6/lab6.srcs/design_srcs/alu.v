@@ -1,9 +1,9 @@
 `timescale 1ns / 1ps
 
 module alu(
-    input [3:0] A, //units 
-    input [3:0] B,  // tens
-    input [1:0] ctrl, // SW[6:5]
+    input [3:0] A,
+    input [3:0] B,  
+    input [1:0] ctrl,
     output reg [7:0] result
     );
     
