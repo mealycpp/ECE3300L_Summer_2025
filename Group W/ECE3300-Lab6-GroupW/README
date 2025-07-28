@@ -16,4 +16,4 @@ Objective: Two independent BCD up/down counters (units & tens), each with its ow
             LED[3:0] = units counter BCD
             LED[7:4] = tens counter BCD
 
-Video Demo: 
+Video Demo: https://youtu.be/tDmsNwrCuAU?si=6XTLR6KtyroO18NP  
