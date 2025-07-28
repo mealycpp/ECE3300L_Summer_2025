@@ -1,1 +1,19 @@
+ECE 3300 Lab 6 – Dual BCD Up/Down Counters, ALU, and Control Display on 7-Segment Display
 
+Members: Jetts Crittenden & Evan Tram
+
+Objective: Two independent BCD up/down counters (units & tens), each with its own direction bit.
+            A simple 4‑bit ALU that can add or subtract those two BCD values.
+            A control-display digit bundling four control bits into one 4-bit nibble:
+            SW5–SW6 = ALU operation (00=add, 01=sub)
+            SW7 = units counter direction (1=up, 0=down)
+            SW8 = tens counter direction (1=up, 0=down)
+            A 3‑digit 7‑segment display:
+            Digit AN0: result low nibble (result[3:0])
+            Digit AN1: result high nibble (result[7:4])
+            Digit AN2: control nibble {SW8, SW7, SW6, SW5}
+            Debug LEDs:
+            LED[3:0] = units counter BCD
+            LED[7:4] = tens counter BCD
+
+Video Demo: 
