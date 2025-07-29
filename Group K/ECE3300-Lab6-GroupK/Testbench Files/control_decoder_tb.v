@@ -21,33 +21,33 @@
 
 module tb_control_decoder;
 
-    reg [3:0] ctrl_in;
+    reg [3:0] ctrl_input;
 
-    wire [3:0] ctrl_out;
+    wire [3:0] ctrl_output;
 
     control_decoder uut (
-        .ctrl_in(ctrl_in),
-        .ctrl_out(ctrl_out)
+        .ctrl_input(ctrl_input),
+        .ctrl_output(ctrl_output)
     );
 
     initial begin
     
-        ctrl_in = 4'b0000; #10;
-        ctrl_in = 4'b0001; #10;
-        ctrl_in = 4'b0010; #10;
-        ctrl_in = 4'b0011; #10;
-        ctrl_in = 4'b0100; #10;
-        ctrl_in = 4'b0101; #10;
-        ctrl_in = 4'b0110; #10;
-        ctrl_in = 4'b0111; #10;
-        ctrl_in = 4'b1000; #10;
-        ctrl_in = 4'b1001; #10;
-        ctrl_in = 4'b1010; #10;
-        ctrl_in = 4'b1011; #10;
-        ctrl_in = 4'b1100; #10;
-        ctrl_in = 4'b1101; #10;
-        ctrl_in = 4'b1110; #10;
-        ctrl_in = 4'b1111; #10;
+        ctrl_input = 4'b0000; #10;
+        ctrl_input = 4'b0001; #10;
+        ctrl_input = 4'b0010; #10;
+        ctrl_input = 4'b0011; #10;
+        ctrl_input = 4'b0100; #10;
+        ctrl_input = 4'b0101; #10;
+        ctrl_input = 4'b0110; #10;
+        ctrl_input = 4'b0111; #10;
+        ctrl_input = 4'b1000; #10;
+        ctrl_input = 4'b1001; #10;
+        ctrl_input = 4'b1010; #10;
+        ctrl_input = 4'b1011; #10;
+        ctrl_input = 4'b1100; #10;
+        ctrl_input = 4'b1101; #10;
+        ctrl_input = 4'b1110; #10;
+        ctrl_input = 4'b1111; #10;
         $finish;
     end
 
