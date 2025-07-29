@@ -24,7 +24,7 @@ module top_lab6(
     input rst_n,
     input [8:0] SW,     
     output [6:0] seg,
-    output [2:0] an,
+    output [7:0] an,
     output [7:0] LED    
 );
 
@@ -43,6 +43,15 @@ module top_lab6(
 
     control_decoder U5 (.ctrl_in(SW[8:5]), .ctrl_out(ctrl_nibble));
 
+    wire [7:0] abs_result;
+    wire [3:0] alu_units;
+    wire [3:0] alu_tens;
+
+    assign abs_result = (alu_result[7]) ? (~alu_result + 1) : alu_result;
+
+    assign alu_tens  = (abs_result / 10) % 10;
+    assign alu_units = abs_result % 10;
+    
     seg7_scan U6 (
         .clk(clk), .rst_n(rst_n),
         .digit0(result[3:0]),
@@ -51,6 +60,5 @@ module top_lab6(
         .seg(seg), .an(an)
     );
 
-    assign LED[3:0] = units;
-    assign LED[7:4] = tens;
+    assign LED = {tens_bcd, unit_bcd};
 endmodule
