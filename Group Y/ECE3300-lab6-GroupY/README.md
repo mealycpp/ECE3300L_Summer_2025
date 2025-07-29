@@ -1,4 +1,4 @@
-# ECE3300-Lab5-GroupY
+# ECE3300-Lab6-GroupY
 Lab 6 One Digit ALU Add/Subtract with Speed Select
 
 Members: Heba Hafez and Sean Wygant
