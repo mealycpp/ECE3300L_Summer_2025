@@ -23,14 +23,14 @@ module bcd_counter_tb;
 
     reg clk;
     reg rst_n;
-    reg dir;
+    reg bit_dir;
 
     wire [3:0] value;
 
     bcd_counter uut (
         .clk(clk), 
         .rst_n(rst_n), 
-        .dir(dir), 
+        .bit_dir(bit_dir), 
         .value(value)
     );
 
@@ -38,12 +38,12 @@ module bcd_counter_tb;
 
     initial begin
         $display("BCD Counter Testbench");
-        $display("Time\tclk\trst_n\tdir\tvalue");
-        $monitor("%0t\t%b\t%b\t%b\t%0d", $time, clk, rst_n, dir, value);
+        $display("Time\tclk\trst_n\tbit_dir\tvalue");
+        $monitor("%0t\t%b\t%b\t%b\t%0d", $time, clk, rst_n, bit_dir, value);
 
         clk = 0;
         rst_n = 0;
-        dir = 1;
+        bit_dir = 1;
 
         #20;
         rst_n = 1;
@@ -52,13 +52,13 @@ module bcd_counter_tb;
         #200;
 
         // Count Down: 9 to 0 and wrap
-        dir = 0;
+        bit_dir = 0;
         #200;
 
-        // Toggle direction mid-count
-        dir = 1; #50;
-        dir = 0; #50;
-        dir = 1; #50;
+        // Toggle bit_direction mid-count
+        bit_dir = 1; #50;
+        bit_dir = 0; #50;
+        bit_dir = 1; #50;
 
         // Trigger reset mid-count
         rst_n = 0; #10;
