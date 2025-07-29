@@ -26,7 +26,7 @@ module seg7_scan(
     output reg [6:0] seg,
     output reg [2:0] an
 );
-    reg [15:0] refresh_counter;
+    reg [15:0] refresh_counter = 0;
     wire refresh_tick = refresh_counter[15];
     reg [1:0] sel;
 
@@ -52,17 +52,23 @@ module seg7_scan(
         endcase
 
         case (current_digit)
-            4'd0: seg = 7'b1000000;
-            4'd1: seg = 7'b1111001;
-            4'd2: seg = 7'b0100100;
-            4'd3: seg = 7'b0110000;
-            4'd4: seg = 7'b0011001;
-            4'd5: seg = 7'b0010010;
-            4'd6: seg = 7'b0000010;
-            4'd7: seg = 7'b1111000;
-            4'd8: seg = 7'b0000000;
-            4'd9: seg = 7'b0010000;
-            default: seg = 7'b1111111;
+            4'd0: seg = 7'b1000000; // 0
+            4'd1: seg = 7'b1111001; // 1
+            4'd2: seg = 7'b0100100; // 2
+            4'd3: seg = 7'b0110000; // 3
+            4'd4: seg = 7'b0011001; // 4
+            4'd5: seg = 7'b0010010; // 5
+            4'd6: seg = 7'b0000010; // 6
+            4'd7: seg = 7'b1111000; // 7
+            4'd8: seg = 7'b0000000; // 8
+            4'd9: seg = 7'b0010000; // 9
+            4'd10: SEG = 7'b0001000; // A
+            4'd11: SEG = 7'b0000011; // B
+            4'd12: SEG = 7'b1000110; // C
+            4'd13: SEG = 7'b0100001; // D
+            4'd14: SEG = 7'b0000110; // E
+            4'd15: SEG = 7'b0001110; // F
+            default: SEG = 7'b1111111; // Blank
         endcase
     end
 endmodule
