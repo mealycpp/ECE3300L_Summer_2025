@@ -1,55 +1,43 @@
 `timescale 1ns / 1ps
 
-//////////////////////////////////////////////////////////////////////////////////
-// Module Name: top_lab6 (Updated)
-// Description: Top-level module updated to use the simplified clock divider.
-//////////////////////////////////////////////////////////////////////////////////
-
-module top_lab6 (
-    input  wire       CLK,
-    input  wire       BTN0,
-    input  wire [8:0] SW,
-    output wire [6:0] SEG,
-    output wire [2:0] AN,
-    output wire [7:0] LED
-);
-    // Global active-low reset from active-high button
-    wire rst_n = ~BTN0;
-
-    // Clock divider path
-    wire clk_div;
-    clock_divider clock_divider_inst (
-        .clk(CLK),
-        .rst_n(rst_n),
-        .sel(SW[4:0]),
-        .clk_div(clk_div)
+module top_lab6(
+    input CLK, 
+    input rst_n, 
+    
+    input [8:0] SW, 
+    
+    output [7:0] LED, 
+    output [6:0] SEG,
+    output DP, 
+    output [7:0] AN 
+    
     );
-
-    // BCD up/down counters (units & tens)
-    wire [3:0] units, tens;
-    bcd_counter units_counter_inst (.clk(clk_div), .rst_n(rst_n), .dir(SW[7]), .bcd(units));
-    bcd_counter tens_counter_inst  (.clk(clk_div), .rst_n(rst_n), .dir(SW[8]), .bcd(tens));
-
-    // ALU - add / subtract
-    wire [7:0] result;
-    alu alu_inst (.A(units), .B(tens), .ctrl(SW[6:5]), .result(result));
-
-    // Control nibble to display on digit 2
+    wire clk_out;
+    wire [3:0] digit0;
+    wire [3:0] digit1;
+    wire [7:0] finalResult;
     wire [3:0] ctrl_nibble;
-    control_decoder control_decoder_inst (.ctrl_in(SW[8:5]), .ctrl_out(ctrl_nibble));
+    wire [11:0] bits;
+    wire [3:0] bcd_units;
+    wire [3:0] bcd_tens;
 
-    // 7-segment display driver
-    seg7_scan seg7_scan_inst (
-        .clk    (CLK),
-        .rst_n  (rst_n),
-        .digit0 (result[3:0]),
-        .digit1 (result[7:4]),
-        .digit2 (ctrl_nibble),
-        .seg    (SEG),
-        .an     (AN)
-    );
+assign bcd_units = finalResult % 10;
+assign bcd_tens  = finalResult / 10;
 
-    // LEDs show raw counter values for debug
-    assign LED[3:0] = units;
-    assign LED[7:4] = tens;
+assign bits[11:0] = { ctrl_nibble[3:0], bcd_tens, bcd_units };
+
+    assign LED = {digit1[3:0], digit0[3:0]};
+     
+    clock_divider clk1 ( .clockIn(CLK), .sel(SW[4:0]), .rst_n(!rst_n), .clk_div(clk_out) );
+    
+    bcd_counter units ( .clk_div(clk_out), .rst_n(!rst_n), .dir_bit(SW[7]), .digit(digit0) );
+    bcd_counter tens ( .clk_div(clk_out), .rst_n(!rst_n), .dir_bit(SW[8]), .digit(digit1) );
+    
+    alu addOrSubtract ( .A(digit0), .B(digit1), .ctrl(SW[6:5]), .result(finalResult) );
+    
+    control_decoder control ( .controlSW(SW[8:5]), .ctrl_nibble(ctrl_nibble) );
+    
+    seg7_scan display ( .CLK(CLK), .rst_n(!rst_n), .bits(bits), .SEG(SEG), .AN(AN), .DP(DP) );
+    
+    
 endmodule
