@@ -1,3 +1,24 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: Cal Poly Pomona
+// Engineer: ECE
+// 
+// Create Date: 08/04/2025 10:46:20 AM
+// Design Name: 
+// Module Name: clock_divider_fixed
+// Project Name: clock_divider_fixed
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
 module clock_divider_fixed(
     input wire clk,                 // 100 MHz clock input
     output reg clk_1kHz = 0,        // ~1 kHz output
