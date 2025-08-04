@@ -5,8 +5,8 @@
 // 
 // Create Date: 08/04/2025 12:56:07 PM
 // Design Name: 
-// Module Name: barrel_shifter16_tb
-// Project Name: barrel_shifter16_tb
+// Module Name: debounce_toggle_tb
+// Project Name: debounce_toggle_tb
 // Target Devices: 
 // Tool Versions: 
 // Description: 
