@@ -35,7 +35,7 @@ module debounce_toggle(
             debounced <= 1;
         else if (shift_reg == 3'b000)
             debounced <= 0;
-        if (~prev_debounced && debounced)     // Toggle output on rising edge of debounced signal
+        if (~prev_debounced && debounced)    
             btn_toggle <= ~btn_toggle;
 
         prev_debounced <= debounced;         // Save previous debounced state
