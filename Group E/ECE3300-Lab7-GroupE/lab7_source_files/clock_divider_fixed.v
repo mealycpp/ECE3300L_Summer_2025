@@ -20,9 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module clock_divider_fixed(
-    input wire clk,                 // 100 MHz clock input
-    output reg clk_1kHz = 0,        // ~1 kHz output
-    output reg clk_demo = 0         // ~2 Hz output
+    input wire clk,                 
+    output reg clk_1kHz = 0,        
+    output reg clk_demo = 0         
 );
 
     parameter DIV_VALUE = 26'd50_000_000;
@@ -42,7 +42,6 @@ module clock_divider_fixed(
     end
   
     always @(posedge clk_1Hz) begin
-        // ~1 kHz: toggle every 1 ms → count to 500
         if (count_1kHz == 500 - 1) begin
             count_1kHz <= 0;
             clk_1kHz <= ~clk_1kHz;
@@ -50,7 +49,6 @@ module clock_divider_fixed(
             count_1kHz <= count_1kHz + 1;
         end
 
-        // ~2 Hz: toggle every 0.25 sec → count to 2 (i.e., 2 cycles per second)
         if (count_demo == 2 - 1) begin
             count_demo <= 0;
             clk_demo <= ~clk_demo;
