@@ -83,10 +83,16 @@ module top_lab7(
 
     //seg7_scan8
     seg7_scan8 scanner (
-        .clk(clk_1kHz),
-        .hex_seg(digits),
-        .an(AN),
-        .seg(SEG)
-    );
-
+    .clk_1kHz (clk_1kHz),
+    .d0       (d0),
+    .d1       (d1),
+    .d2       (d2),
+    .d3       (d3),
+    .d4       (d4),  
+    .d5       (d5),
+    .d6       (d6),
+    .d7       (d7),
+    .AN       (AN),
+    .SEG      (SEG)
+);
 endmodule
