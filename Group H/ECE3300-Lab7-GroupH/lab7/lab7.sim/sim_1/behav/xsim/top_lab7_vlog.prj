@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "C:/Xilinx/2025.1/Vivado/data/rsb/busdef" \
+"../../../../lab7.srcs/sources_1/new/barrel_shifter16.v" \
+"../../../../lab7.srcs/sources_1/new/clock_divider_fixed.v" \
+"../../../../lab7.srcs/sources_1/new/debounce_toggle.v" \
+"../../../../lab7.srcs/sources_1/new/hex_to_7seg.v" \
+"../../../../lab7.srcs/sources_1/new/seg7_scan8.v" \
+"../../../../lab7.srcs/sources_1/new/shamt_counter.v" \
+"../../../../lab7.srcs/sources_1/new/top_lab7.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
