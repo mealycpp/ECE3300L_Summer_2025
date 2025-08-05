@@ -1,12 +1,12 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: Cal Poly Pomona
-// Engineer: ECE
+// Company: 
+// Engineer: 
 // 
-// Create Date: 08/04/2025 12:56:07 PM
+// Create Date: 08/05/2025 11:31:27 AM
 // Design Name: 
 // Module Name: debounce_toggle_tb
-// Project Name: debounce_toggle_tb
+// Project Name: 
 // Target Devices: 
 // Tool Versions: 
 // Description: 
@@ -21,43 +21,65 @@
 
 module debounce_toggle_tb;
 
-    reg clk = 0;
-    reg btn_raw = 0;
+    reg  clk = 0;        
+    reg  btn_raw = 0;
     wire btn_toggle;
 
-    debounce_toggle uut (
-        .clk_1kHz(clk),
-        .btn_raw(btn_raw),
+    always #5_000 clk = ~clk;
+
+    debounce_toggle dut (
+        .clk_1kHz  (clk),
+        .btn_raw   (btn_raw),
         .btn_toggle(btn_toggle)
     );
 
-    always #500 clk = ~clk; // 1 kHz clock
+    task bounce_press;
+        begin
+            btn_raw = 1; #500;     
+            btn_raw = 0; #400;
+            btn_raw = 1; #800;
+            btn_raw = 0; #600;
+            btn_raw = 1;           // settle high
+        end
+    endtask
+
+    task bounce_release;
+        begin
+            btn_raw = 0; #500;
+            btn_raw = 1; #400;
+            btn_raw = 0; #800;
+            btn_raw = 1; #600;
+            btn_raw = 0;           // settle low
+        end
+    endtask
 
     initial begin
-        #2000;
+        // Wait ~20 us to see some clock edges in the first 1 ms window
+        #20_000;
 
-        // Simulate noisy press
-        btn_raw = 1; #100;
-        btn_raw = 0; #100;
-        btn_raw = 1; #200;
-        btn_raw = 0; #100;
-        btn_raw = 1; #1000;
+        // Noisy press then hold ~100 us (≈10 samples at 100 kHz)
+        bounce_press();
+        #100_000;
 
-        // Hold
-        #5000;
+        // Noisy release then hold ~100 us
+        bounce_release();
+        #100_000;
 
-        // Simulate noisy release
-        btn_raw = 0; #100;
-        btn_raw = 1; #100;
-        btn_raw = 0; #200;
-        btn_raw = 1; #100;
-        btn_raw = 0; #1000;
+        // Clean press and release (longer holds)
+        btn_raw = 1; #200_000;
+        btn_raw = 0; #200_000;
 
-        // Final clean toggle
-        btn_raw = 1; #3000;
-        btn_raw = 0; #3000;
+        // Brief glitch (< one sample) that should be ignored
+        btn_raw = 1; #200; btn_raw = 0; #100_000;
 
-        #1000;
+        // Final valid press
+        btn_raw = 1; #200_000;
+        btn_raw = 0; #200_000;
+
+        #50_000;
         $finish;
     end
 endmodule
+
+
+
