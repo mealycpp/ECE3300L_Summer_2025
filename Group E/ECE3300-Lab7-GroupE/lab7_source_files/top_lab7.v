@@ -49,7 +49,7 @@ module top_lab7(
     
     // Debounce toggle for BTNC (BTN[4])
     debounce_toggle db_btnc (
-        .clk(clk_1kHz),
+        .clk_1kHz(clk_1kHz),
         .btn_raw(BTN[4]),
         .btn_toggle(btnc_toggle)
     );
