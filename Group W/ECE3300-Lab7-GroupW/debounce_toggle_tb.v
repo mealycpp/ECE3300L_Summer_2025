@@ -32,6 +32,17 @@ module debounce_toggle_tb(
             btn_raw_tb = 0;
             #100
             
+            // test glitches
+            btn_raw_tb = 1;
+            #10
+            btn_raw_tb = 0;
+            #10
+            btn_raw_tb = 1;
+            #10
+            btn_raw_tb = 0;
+            
+            #100
+            
             $finish;
             
         end
