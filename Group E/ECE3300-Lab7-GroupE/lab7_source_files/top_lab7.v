@@ -46,7 +46,8 @@ module top_lab7(
     //shamt_counter
     wire [1:0] shamt_high;
     shamt_counter shamtctr (
-        .clk(BTN[4]),   // raw BTNC
+         .clk(btnc_pulse),   // ✅ now a one-cycle pulse from clk_demo domain
+        .rst(~rst_n),
         .shamt_high(shamt_high)
     );
 
