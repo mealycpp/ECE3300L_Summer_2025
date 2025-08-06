@@ -97,16 +97,17 @@ module top_lab7(
     // 7-segment scanner
     seg7_scan8 scanner (
         .clk_1kHz(clk_1kHz),
-        .SEG0(digits[0]),
-        .SEG1(digits[1]),
-        .SEG2(digits[2]),
-        .SEG3(digits[3]),
-        .SEG4(digits[4]),
-        .SEG5(digits[5]),
-        .SEG6(digits[6]),
-        .SEG7(digits[7]),
+        .d0(digits[0]),
+        .d1(digits[1]),
+        .d2(digits[2]),
+        .d3(digits[3]),
+        .d4(digits[4]),
+        .d5(digits[5]),
+        .d6(digits[6]),
+        .d7(digits[7]),
         .AN(AN),
         .SEG(SEG)
     );
+
 
 endmodule
