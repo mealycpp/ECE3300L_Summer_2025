@@ -1,1 +1,17 @@
+ECE 3300 Lab 7 – 16-bit Barrel Shifter / Rotator & 4-Digit Display 7-Segment Display
 
+Members: Jetts Crittenden & Evan Tram
+
+Objective: A 16‑bit combinational barrel shifter that can logically shift or rotate left / right by an arbitrary amount k (0–15) in one clock tick.
+           Input interface: the raw 16‑bit word comes from SW15–SW0.
+           Control interface: the four on‑board push‑buttons (BTNU, BTND, BTNL, BTNR) are debounced and latched to behave like extra toggle‑switches that provide:
+           DIR (Left = 0, Right = 1)
+           ROT (Logical = 0, Rotate = 1)
+           SHAMT[1:0] – the two LSBs of the 4‑bit shift amount
+           BTN_center (BTNC) is reserved for asynchronous reset
+           SHAMT[3:2] come from a tiny up‑counter that increments once per BTNC press so you can demo all 16 positions without giving up slide‑switches.
+           Output interface: the 16‑bit result is shown as four hexadecimal nibbles on the right‑most four digits (AN0–AN3) of the board’s 8‑digit 7‑segment display. The remaining digits (AN4–AN7) are blanked.
+           A fixed clock‑divider slows the 100 MHz system clock to \~2 Hz for the shifter demo and ~1 kHz for display scanning — fast enough for the display, slow enough for human eyes to track shifts.
+           Optional debug LEDs: display DIR, ROT, and SHAMT on LED7‑LED0.
+
+Video Demo: 
