@@ -14,4 +14,5 @@ Objective: A 16‑bit combinational barrel shifter that can logically shift or r
            A fixed clock‑divider slows the 100 MHz system clock to \~2 Hz for the shifter demo and ~1 kHz for display scanning — fast enough for the display, slow enough for human eyes to track shifts.
            Optional debug LEDs: display DIR, ROT, and SHAMT on LED7‑LED0.
 
-Video Demo: 
+Video Demo: https://youtu.be/5cZJpbCB5Aw?si=F6NKejCM2gSPB-SU 
+
