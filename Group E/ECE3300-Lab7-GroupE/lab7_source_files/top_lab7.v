@@ -60,7 +60,7 @@ module top_lab7(
 
     // SHAMT counter
     wire [1:0] shamt_high;
-    shamt shamtctr (
+    shamt_counter shamtctr (
         .clk(btnc_pulse),
         .rst(~rst_n),
         .shamt_high(shamt_high)
