@@ -1,0 +1,71 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 08/04/2025 06:48:27 PM
+// Design Name: 
+// Module Name: top_lab7
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module top_lab7(
+    input CLK,
+    input rst_n,
+    
+    input [15:0] SW,
+    input BTNC, BTNU, BTND, BTNL, BTNR,
+    
+    output [6:0] SEG, 
+    output DP,
+    output [7:0] AN, // only have 4 displays showing 
+    
+    output [5:0] LED 
+    
+    );
+    wire clk1kHZ;
+    wire clk2HZ;
+    wire [4:0] cleanButton;
+    wire [3:0] shiftAmount;
+    wire [15:0] dataOut;
+    wire [1:0] shamtUpper;
+    wire [3:0] currentDigit;
+    wire [6:0] SEG0, SEG1, SEG2, SEG3;
+    
+    assign shiftAmount = {shamtUpper[1:0], cleanButton[4:3]};
+    assign LED = {shiftAmount[3:0], cleanButton[2], cleanButton[1] };
+  
+    clock_divider_fixed clks ( .clockIn(CLK), .rst_n(rst_n), .clk_div1(clk1kHZ), .clk_div2(clk2HZ) );
+    
+    debounce_toggle t0 (.clk(clk1kHZ), .rst(rst_n), .btn_raw(BTNC), .state(cleanButton[0]));
+    debounce_toggle t1 (.clk(clk1kHZ), .rst(rst_n), .btn_raw(BTNU), .state(cleanButton[1]));
+    debounce_toggle t2 (.clk(clk1kHZ), .rst(rst_n), .btn_raw(BTND), .state(cleanButton[2]));
+    debounce_toggle t3 (.clk(clk1kHZ), .rst(rst_n), .btn_raw(BTNR), .state(cleanButton[3]));
+    debounce_toggle t4 (.clk(clk1kHZ), .rst(rst_n), .btn_raw(BTNL), .state(cleanButton[4]));
+    
+    shamt_counter shiftCount ( .clk(clk2HZ), .rst_n(rst_n), .btnc_clean(cleanButton[0]), .shamt_upper(shamtUpper) );
+    
+    barrel_shifter16 b1 (.data_in(SW), .dir(cleanButton[1]), .rotate(cleanButton[2]), .shamt(shiftAmount), .result_word(dataOut) );
+    
+    
+    hex_to_7seg segDisplay0 ( .hex(dataOut[3:0]), .SEG(SEG0) );
+    hex_to_7seg segDisplay1 ( .hex(dataOut[7:4]), .SEG(SEG1) );
+    hex_to_7seg segDisplay2 ( .hex(dataOut[11:8]), .SEG(SEG2) );
+    hex_to_7seg segDisplay3 ( .hex(dataOut[15:12]), .SEG(SEG3) );
+    
+    seg7_scan8 scan (.clk_1kHz(clk1kHZ), .rst_n(rst_n), .seg0(SEG0), .seg1(SEG1), .seg2(SEG2), .seg3(SEG3), .SEG(SEG),
+    .AN(AN), .DP(DP) );
+    
+    
+endmodule
