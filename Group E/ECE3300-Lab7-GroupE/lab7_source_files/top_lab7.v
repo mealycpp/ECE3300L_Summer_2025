@@ -43,6 +43,24 @@ module top_lab7(
     debounce_toggle db_s0  (.clk_1kHz(clk_1kHz), .btn_raw(BTN[2]), .btn_toggle(sham0)); // BTNL
     debounce_toggle db_s1  (.clk_1kHz(clk_1kHz), .btn_raw(BTN[3]), .btn_toggle(sham1)); // BTNR
 
+    // Debounced and edge-detected BTNC (BTN[4])
+    wire btnc_toggle;
+    wire btnc_pulse;
+    
+    // Debounce toggle for BTNC (BTN[4])
+    debounce_toggle db_btnc (
+        .clk(clk_1kHz),
+        .btn_raw(BTN[4]),
+        .btn_toggle(btnc_toggle)
+    );
+
+    // One-pulse generation (positive edge detection)
+    reg btnc_prev;
+    always @(posedge clk_demo) begin
+        btnc_prev <= btnc_toggle;
+    end
+    assign btnc_pulse = btnc_toggle & ~btnc_prev;
+    
     //shamt_counter
     wire [1:0] shamt_high;
     shamt_counter shamtctr (
