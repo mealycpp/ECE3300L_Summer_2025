@@ -20,12 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module shamt_counter(
-    input wire clk,               
-    output reg [1:0] shamt_high   
+    input wire clk,           
+    input wire rst,
+    output reg [1:0] shamt_high
 );
-
-    always @(posedge clk) begin
-        shamt_high <= shamt_high + 1;
+    always @(posedge clk or posedge rst) begin
+        if (rst)
+            shamt_high <= 0;
+        else
+            shamt_high <= shamt_high + 1;
     end
-
 endmodule
