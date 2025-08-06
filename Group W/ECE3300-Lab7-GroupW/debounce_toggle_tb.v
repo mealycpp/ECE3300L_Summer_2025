@@ -23,7 +23,12 @@ module debounce_toggle_tb(
             
             #100
             btn_raw_tb = 1;
-            #100
+            #40
+            btn_raw_tb = 0;
+            #40
+            
+            btn_raw_tb = 1;
+            #40
             btn_raw_tb = 0;
             #100
             
