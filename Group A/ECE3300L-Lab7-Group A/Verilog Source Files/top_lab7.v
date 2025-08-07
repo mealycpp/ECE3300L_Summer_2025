@@ -47,7 +47,11 @@ module top_lab7(
     
     shamt_counter cnt(clk_2Hz, BTNC, shamt);
     
-    barrel_shifter16 shifter(SW, {shamt, BTNUtoggle, BTNDtoggle}, BTNLtoggle, BTNRtoggle, outputData);
+    barrel_shifter16 shifter(.data_in(SW), 
+                             .shamt({shamt, BTNUtoggle, BTNDtoggle}), 
+                             .dir(BTNLtoggle), 
+                             .rotate(BTNRtoggle), 
+                             .data_out(outputData));
     
     seg7_scan8 scan(clk_1kHz, outputData, AN, SEG);
     
