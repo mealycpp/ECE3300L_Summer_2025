@@ -1,26 +1,24 @@
 module seg7_scan8(
-    input clk, rst,
-    input [15:0] value,
-    output reg [6:0] seg,
-    output reg [7:0] an
-);
-    reg [2:0] scan = 0;
-    wire [3:0] nibble;
-    assign nibble = (scan==0)?value[3:0]:
-                    (scan==1)?value[7:4]:
-                    (scan==2)?value[11:8]:
-                               value[15:12];
-    wire [6:0] seg_code;
-    hex_to_7seg h2s(nibble, seg_code);
-
-    always @(posedge clk or posedge rst) begin
-        if (rst) begin
-            scan <= 0; an <= 8'hFF;
-        end else begin
-            scan <= scan + 1;
-            an <= 8'hFF;
-            an[scan] <= 0;  // active low
-            seg <= seg_code;
-        end
-    end
+                    input clk_1khz,
+                    input [6:0] seg0, seg1, seg2, seg3, seg4, seg5, seg6, seg7,
+                    output reg [7:0] AN,
+                    output reg [6:0] SEG
+                );
+                
+                reg [2:0] scan_cnt = 0;
+                always @(posedge clk_1khz) begin
+                    scan_cnt <= scan_cnt + 1;
+                end
+                always @(*) begin
+                    case(scan_cnt)
+                        3'd0: begin AN = 8'b11111110; SEG = seg0; end // rightmost digit
+                        3'd1: begin AN = 8'b11111101; SEG = seg1; end
+                        3'd2: begin AN = 8'b11111011; SEG = seg2; end
+                        3'd3: begin AN = 8'b11110111; SEG = seg3; end
+                        3'd4: begin AN = 8'b11101111; SEG = seg4; end // blank
+                        3'd5: begin AN = 8'b11011111; SEG = seg5; end // blank
+                        3'd6: begin AN = 8'b10111111; SEG = seg6; end // blank
+                        3'd7: begin AN = 8'b01111111; SEG = seg7; end // blank
+                    endcase
+                end
 endmodule
