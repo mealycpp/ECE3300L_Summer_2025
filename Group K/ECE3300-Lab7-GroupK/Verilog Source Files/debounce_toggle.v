@@ -36,6 +36,11 @@ module debounce_toggle (
         .btn_in(btn_in)
     );
 
+    initial begin
+        btn_toggle = 0;
+        btn_prev = 0;
+    end 
+    
     always @(posedge clk ) begin
 
             if (btn_in && !btn_prev)
