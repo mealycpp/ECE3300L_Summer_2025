@@ -1,0 +1,66 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 08/06/2025 09:36:13 PM
+// Design Name: 
+// Module Name: barrel_shifter16_tb
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module barrel_shifter16_tb;
+     reg [15:0] SW;
+    reg [3:0] ShAmt;
+    reg [1:0] control;
+    wire [15:0] out;
+    barrel_shifter16 uut (
+        .control(control),
+        .SW(SW),
+        .ShAmt(ShAmt),
+        .out(out)
+    );
+
+    reg [15:0] patterns [0:5];
+    integer p, c, s;
+
+    initial begin
+        patterns[0] = 16'hA5A5;
+        patterns[1] = 16'h8001;
+        patterns[2] = 16'h0001;
+        patterns[3] = 16'hFFFF;
+        patterns[4] = 16'h0000;
+        patterns[5] = 16'h1234;
+        $display("Start");
+        $display("Time\tCtrl\tShAmt\tSW\t\tOut");
+
+        for (p = 0; p < 6; p = p + 1) begin
+            SW = patterns[p];
+
+            for (c = 0; c < 4; c = c + 1) begin
+                control = c[1:0];
+
+                for (s = 0; s < 16; s = s + 1) begin
+                    ShAmt = s[3:0];
+                    #5; 
+                    $display("%4dns\t%2b\t%2d\t%h\t%h", $time, control, ShAmt, SW, out);
+                end
+            end
+        end
+
+        $display("Exhaustive test complete.");
+        $finish;
+    end
+
+endmodule
