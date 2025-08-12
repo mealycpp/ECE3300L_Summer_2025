@@ -21,16 +21,18 @@
 
 
 module pwm_core(
-    input wire clk,
-    input wire rst_n,
-    input wire [7:0] period,
-    input wire [7:0] duty_r, duty_g, duty_b,
-    output reg pwm_r, pwm_g, pwm_b
+    input  wire       clk,
+    input  wire       rst_n,
+    input  wire [7:0] period,           // RES (effective period = period+1)
+    input  wire [7:0] duty_r, duty_g, duty_b,
+    output reg        pwm_r, pwm_g, pwm_b
 );
-    wire [8:0] eff_period = {1'b0, period} + 9'd1;
-    
+    wire [8:0] eff_period = {1'b0, period} + 9'd1;  // allow period=0..255 => 1..256
+
     function [8:0] clamp9(input [7:0] d);
-        clamp9 = ( {1'b0,d} >= eff_period ) ? (eff_period - 9'd1) : {1'b0,d};
+        begin
+            clamp9 = ({1'b0,d} >= eff_period) ? (eff_period - 9'd1) : {1'b0,d};
+        end
     endfunction
 
     reg [8:0] cnt;
@@ -39,9 +41,10 @@ module pwm_core(
         else if (cnt == eff_period - 1) cnt <= 0;
         else cnt <= cnt + 1;
     end
+
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) {pwm_r, pwm_g, pwm_b} <= 0;
-        else begin 
+        else begin
             pwm_r <= (cnt < clamp9(duty_r));
             pwm_g <= (cnt < clamp9(duty_g));
             pwm_b <= (cnt < clamp9(duty_b));
