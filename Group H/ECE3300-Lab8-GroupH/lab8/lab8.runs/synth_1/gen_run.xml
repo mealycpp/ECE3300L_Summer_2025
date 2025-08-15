@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1754847751" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top_lab8.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1755225812" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top_lab8.dcp">
   <File Type="PA-TCL" Name="top_lab8.tcl"/>
   <File Type="REPORTS-TCL" Name="top_lab8_reports.tcl"/>
   <File Type="RDS-RDS" Name="top_lab8.vds"/>
@@ -86,9 +86,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

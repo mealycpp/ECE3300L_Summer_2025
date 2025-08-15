@@ -1,0 +1,14 @@
+0.7
+2020.2
+May 22 2025
+00:13:55
+D:/verilog/ece3300l/Group H/ECE3300-Lab8-GroupH/lab8/lab8.sim/sim_1/behav/xsim/glbl.v,1741209010,verilog,,,,glbl,,,,,,,,
+D:/verilog/ece3300l/Group H/ECE3300-Lab8-GroupH/lab8/lab8.srcs/sim_1/new/debounce_onepulse_tb.v,1755228073,verilog,,,,debounce_onepulse_tb,,,C:/Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+D:/verilog/ece3300l/Group H/ECE3300-Lab8-GroupH/lab8/lab8.srcs/sim_1/new/load_fsm_tb.v,1755228149,verilog,,,,load_fsm_tb,,,C:/Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+D:/verilog/ece3300l/Group H/ECE3300-Lab8-GroupH/lab8/lab8.srcs/sim_1/new/pwm_core_tb.v,1755227784,verilog,,,,pwm_core_tb,,,C:/Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+D:/verilog/ece3300l/Group H/ECE3300-Lab8-GroupH/lab8/lab8.srcs/sources_1/new/clock_divider_fixed.v,1755225713,verilog,,D:/verilog/ece3300l/Group H/ECE3300-Lab8-GroupH/lab8/lab8.srcs/sources_1/new/debounce_onepulse.v,,clock_divider_fixed,,,C:/Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+D:/verilog/ece3300l/Group H/ECE3300-Lab8-GroupH/lab8/lab8.srcs/sources_1/new/debounce_onepulse.v,1755225704,verilog,,D:/verilog/ece3300l/Group H/ECE3300-Lab8-GroupH/lab8/lab8.srcs/sim_1/new/debounce_onepulse_tb.v,,debounce_onepulse,,,C:/Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+D:/verilog/ece3300l/Group H/ECE3300-Lab8-GroupH/lab8/lab8.srcs/sources_1/new/load_fsm.v,1755225722,verilog,,D:/verilog/ece3300l/Group H/ECE3300-Lab8-GroupH/lab8/lab8.srcs/sim_1/new/load_fsm_tb.v,,load_fsm,,,C:/Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+D:/verilog/ece3300l/Group H/ECE3300-Lab8-GroupH/lab8/lab8.srcs/sources_1/new/pwm_core.v,1755225730,verilog,,D:/verilog/ece3300l/Group H/ECE3300-Lab8-GroupH/lab8/lab8.srcs/sim_1/new/pwm_core_tb.v,,pwm_core,,,C:/Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+D:/verilog/ece3300l/Group H/ECE3300-Lab8-GroupH/lab8/lab8.srcs/sources_1/new/rgb_led_driver.v,1754846267,verilog,,D:/verilog/ece3300l/Group H/ECE3300-Lab8-GroupH/lab8/lab8.srcs/sources_1/new/top_lab8.v,,rgb_led_driver,,,C:/Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+D:/verilog/ece3300l/Group H/ECE3300-Lab8-GroupH/lab8/lab8.srcs/sources_1/new/top_lab8.v,1754847744,verilog,,,,top_lab8,,,C:/Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,

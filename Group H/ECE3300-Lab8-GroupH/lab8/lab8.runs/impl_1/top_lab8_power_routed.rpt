@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date             : Sun Aug 10 10:44:26 2025
+| Date             : Thu Aug 14 19:45:58 2025
 | Host             : ASTROFRANK running 64-bit major release  (build 9200)
 | Command          : report_power -file top_lab8_power_routed.rpt -pb top_lab8_power_summary_routed.pb -rpx top_lab8_power_routed.rpx
 | Design           : top_lab8
@@ -52,14 +52,14 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      273 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       68 |     63400 |            0.11 |
-|   Register     |    <0.001 |      150 |    126800 |            0.12 |
-|   CARRY4       |    <0.001 |       14 |     15850 |            0.09 |
+| Clocks         |     0.001 |        3 |       --- |             --- |
+| Slice Logic    |    <0.001 |      324 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      116 |     63400 |            0.18 |
+|   Register     |    <0.001 |      152 |    126800 |            0.12 |
+|   CARRY4       |    <0.001 |       20 |     15850 |            0.13 |
 |   Others       |     0.000 |        7 |       --- |             --- |
 |   BUFG         |     0.000 |        2 |        32 |            6.25 |
-| Signals        |    <0.001 |      222 |       --- |             --- |
+| Signals        |    <0.001 |      261 |       --- |             --- |
 | I/O            |    <0.001 |       21 |       210 |           10.00 |
 | Static Power   |     0.084 |          |           |                 |
 | Total          |     0.086 |          |           |                 |

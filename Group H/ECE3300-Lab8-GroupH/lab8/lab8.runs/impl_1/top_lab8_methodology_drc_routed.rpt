@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date         : Sun Aug 10 10:44:26 2025
+| Date         : Thu Aug 14 19:45:58 2025
 | Host         : ASTROFRANK running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_lab8_methodology_drc_routed.rpt -pb top_lab8_methodology_drc_routed.pb -rpx top_lab8_methodology_drc_routed.rpx
 | Design       : top_lab8

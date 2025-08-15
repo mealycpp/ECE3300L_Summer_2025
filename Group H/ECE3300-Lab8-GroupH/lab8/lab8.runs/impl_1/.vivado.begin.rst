@@ -1,40 +1,10 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="hvito" Host="ASTROFRANK" Pid="32616" HostCore="32" HostMemory="034266218496">
+    <Process Command="vivado.bat" Owner="hvito" Host="ASTROFRANK" Pid="16448" HostCore="32" HostMemory="034266218496">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="hvito" Host="ASTROFRANK" Pid="32880" HostCore="32" HostMemory="034266218496">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="hvito" Host="ASTROFRANK" Pid="20176" HostCore="32" HostMemory="034266218496">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="hvito" Host="ASTROFRANK" Pid="4568" HostCore="32" HostMemory="034266218496">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="hvito" Host="ASTROFRANK" Pid="15156" HostCore="32" HostMemory="034266218496">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="hvito" Host="ASTROFRANK" Pid="2764" HostCore="32" HostMemory="034266218496">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="hvito" Host="ASTROFRANK" Pid="21028" HostCore="32" HostMemory="034266218496">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="hvito" Host="ASTROFRANK" Pid="9644" HostCore="32" HostMemory="034266218496">
+    <Process Command="vivado.bat" Owner="hvito" Host="ASTROFRANK" Pid="28956" HostCore="32" HostMemory="034266218496">
     </Process>
 </ProcessHandle>
